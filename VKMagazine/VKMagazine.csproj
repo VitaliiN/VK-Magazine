@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9C923025-C887-4FF1-A692-7C8B538746CC}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VKMagazine</RootNamespace>
+    <AssemblyName>VKMagazine</AssemblyName>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>VKMagazine_$(Configuration)_$(Platform).xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>VKMagazine.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <ExpressionBlendVersion>5.0.30924.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|ARM' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\ARM\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|ARM' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\ARM\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\Category.cs" />
+    <Compile Include="DAO\DbSingleton.cs" />
+    <Compile Include="DAO\FavouritedPosts.cs" />
+    <Compile Include="DAO\Group.cs" />
+    <Compile Include="DAO\MagazineDatabaseContext.cs" />
+    <Compile Include="DAO\VersionTable.cs" />
+    <Compile Include="FriendsSharePage.xaml.cs">
+      <DependentUpon>FriendsSharePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GroupListPage.xaml.cs">
+      <DependentUpon>GroupListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GroupsSelectPage.xaml.cs">
+      <DependentUpon>GroupsSelectPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ApplicationBarBuilder.cs" />
+    <Compile Include="Helpers\CategoryHelper.cs" />
+    <Compile Include="Helpers\DataLoaderHelper.cs" />
+    <Compile Include="Helpers\GroupsHelper.cs" />
+    <Compile Include="Helpers\ImageWithLoading.xaml.cs">
+      <DependentUpon>ImageWithLoading.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\MyImageConverter.cs" />
+    <Compile Include="Helpers\PivotPages.cs" />
+    <Compile Include="Helpers\SettignsHelper.cs" />
+    <Compile Include="Helpers\UrlizerTextBox.cs" />
+    <Compile Include="Helpers\VkHelper.cs" />
+    <Compile Include="Helpers\ZoomingImage.xaml.cs">
+      <DependentUpon>ZoomingImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ImageViewPage.xaml.cs">
+      <DependentUpon>ImageViewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LocalizedStrings.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestWrapper\VkRequestWrapper.cs" />
+    <Compile Include="Resources\AppResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Response\GetGroupsById.cs" />
+    <Compile Include="Response\GetUserGroupsResponse.cs" />
+    <Compile Include="Response\GetuserInfoResponse.cs" />
+    <Compile Include="Response\JoinGroupResponse.cs" />
+    <Compile Include="Response\PostDetails.cs" />
+    <Compile Include="Response\PostShareResponse.cs" />
+    <Compile Include="SettignsPage.xaml.cs">
+      <DependentUpon>SettignsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreenPage.xaml.cs">
+      <DependentUpon>SplashScreenPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\GroupListItemViewModel.cs" />
+    <Compile Include="ViewModels\ItemViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\NewsViewModel.cs" />
+    <Compile Include="ViewModels\PostDetailsViewModel.cs" />
+    <Compile Include="ViewModels\SearchGroupViewModel.cs" />
+    <Compile Include="VkAuthPage.xaml.cs">
+      <DependentUpon>VkAuthPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="FriendsSharePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GroupListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GroupsSelectPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Helpers\ImageWithLoading.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Helpers\ZoomingImage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ImageViewPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <DesignData Include="SampleData\MainViewModelSampleData.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </DesignData>
+    <Page Include="ResourceDictionaryMainPage.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SettignsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SplashScreenPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VkAuthPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\AlignmentGrid.png" />
+    <Content Include="Assets\ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileMedium.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileSmall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\IconicTileMediumLarge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\IconicTileSmall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\ab_icon_catalog.png" />
+    <Content Include="Icons\ab_icon_new.png" />
+    <Content Include="Icons\ab_icon_refresh.png" />
+    <Content Include="Icons\acura.jpg" />
+    <Content Include="Icons\animals.png" />
+    <Content Include="Icons\appbar.social.sharethis.png" />
+    <Content Include="Icons\arrow_4.png" />
+    <Content Include="Icons\auto_and_moto.png" />
+    <Content Include="Icons\bin.png" />
+    <Content Include="Icons\busines.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\check.png" />
+    <Content Include="Icons\check2.png" />
+    <Content Include="Icons\connect.png" />
+    <Content Include="Icons\delete.png" />
+    <Content Include="Icons\down.PNG" />
+    <Content Include="Icons\drawer_shadow.9.png" />
+    <Content Include="Icons\feature.search.dar.png" />
+    <Content Include="Icons\feature.search.png" />
+    <Content Include="Icons\goroskop.png" />
+    <Content Include="Icons\icon.png" />
+    <Content Include="Icons\icon_logout.png" />
+    <Content Include="Icons\icon_logout_black.png" />
+    <Content Include="Icons\icon_settings.png" />
+    <Content Include="Icons\icon_settings_pressed.png" />
+    <Content Include="Icons\icon_share.png" />
+    <Content Include="Icons\icon_share_pressed.png" />
+    <Content Include="Icons\icon_sl_black_star.png" />
+    <Content Include="Icons\icon_sl_black_star_small.png" />
+    <Content Include="Icons\icon_sl_star.png" />
+    <Content Include="Icons\icon_sl_star_small.png" />
+    <Content Include="Icons\icon_sm_black_catalog.png" />
+    <Content Include="Icons\icon_sm_black_news.png" />
+    <Content Include="Icons\icon_sm_catalog.png" />
+    <Content Include="Icons\icon_sm_news.png" />
+    <Content Include="Icons\ic_drawer.png" />
+    <Content Include="Icons\ic_launcher.png" />
+    <Content Include="Icons\isk.png" />
+    <Content Include="Icons\kulinar.png" />
+    <Content Include="Icons\lifestyle.png" />
+    <Content Include="Icons\list_icon.png" />
+    <Content Include="Icons\login_bg.png" />
+    <Content Include="Icons\mail.png" />
+    <Content Include="Icons\mail_pressed.PNG" />
+    <Content Include="Icons\man.png" />
+    <Content Include="Icons\mes.png" />
+    <Content Include="Icons\mes_pressed.PNG" />
+    <Content Include="Icons\misli.png" />
+    <Content Include="Icons\moda.png" />
+    <Content Include="Icons\movie.png" />
+    <Content Include="Icons\music.png" />
+    <Content Include="Icons\next.png" />
+    <Content Include="Icons\next_icon.png" />
+    <Content Include="Icons\not_read.png" />
+    <Content Include="Icons\plus18.png" />
+    <Content Include="Icons\read.png" />
+    <Content Include="Icons\refresh.png" />
+    <Content Include="Icons\search_icon.png" />
+    <Content Include="Icons\shadow.PNG" />
+    <Content Include="Icons\share.PNG" />
+    <Content Include="Icons\smi.png" />
+    <Content Include="Icons\smile.png" />
+    <Content Include="Icons\spash_logo.png" />
+    <Content Include="Icons\splash_text.png" />
+    <Content Include="Icons\sport.png" />
+    <Content Include="Icons\sub_avatar.png" />
+    <Content Include="Icons\tech.png" />
+    <Content Include="Icons\textfield_multiline_active_holo_dark.9.png" />
+    <Content Include="Icons\top.png" />
+    <Content Include="Icons\travel.png" />
+    <Content Include="Icons\up.PNG" />
+    <Content Include="Icons\up2.png" />
+    <Content Include="Icons\up_caret.png" />
+    <Content Include="Icons\vk-wp.png" />
+    <Content Include="Icons\vk.png" />
+    <Content Include="Icons\vk_pressed.png" />
+    <Content Include="Icons\woman.png" />
+    <Content Include="README_FIRST.txt" />
+    <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Delete.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="KawagoeToolkit">
+      <HintPath>..\packages\Kawagoe.1.1\KawagoeToolkit\Bin\Debug\KawagoeToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Phone.Controls, Version=8.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Toolkit, Version=8.0.1.0, Culture=neutral, PublicKeyToken=b772ad94eb9ca604, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Json50r8\Bin\portable-net45+wp80+win8\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp.WindowsPhone">
+      <HintPath>..\packages\RestSharp.104.4.0\lib\sl4-wp71\RestSharp.WindowsPhone.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.18\lib\sl4-windowsphone71\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.18\lib\sl4-windowsphone71\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.18\lib\sl4-windowsphone71\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+</Project>

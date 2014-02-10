@@ -1,0 +1,459 @@
+D:\Apps\Журнал ВК\VKMagazine\VKMagazine\Bin\Debug\Assets\ApplicationIcon.png
+D:\Apps\Журнал ВК\VKMagazine\VKMagazine\Bin\Debug\Assets\Tiles\FlipCycleTileLarge.png
+D:\Apps\Журнал ВК\VKMagazine\VKMagazine\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png
+D:\Apps\Журнал ВК\VKMagazine\VKMagazine\Bin\Debug\Assets\Tiles\FlipCycleTileSmall.png
+D:\Apps\Журнал ВК\VKMagazine\VKMagazine\Bin\Debug\Assets\Tiles\IconicTileMediumLarge.png
+D:\Apps\Журнал ВК\VKMagazine\VKMagazine\Bin\Debug\Assets\Tiles\IconicTileSmall.png
+D:\Apps\Журнал ВК\VKMagazine\VKMagazine\Bin\Debug\VKMagazine.dll
+D:\Apps\Журнал ВК\VKMagazine\VKMagazine\Bin\Debug\VKMagazine.pdb
+D:\Apps\Журнал ВК\VKMagazine\VKMagazine\Bin\Debug\AppManifest.xaml
+D:\Apps\Журнал ВК\VKMagazine\VKMagazine\Bin\Debug\VKMagazine_Debug_AnyCPU.xap
+D:\Apps\Журнал ВК\VKMagazine\VKMagazine\obj\Debug\App.g.cs
+D:\Apps\Журнал ВК\VKMagazine\VKMagazine\obj\Debug\MainPage.g.cs
+D:\Apps\Журнал ВК\VKMagazine\VKMagazine\obj\Debug\VKMagazine.g.resources
+D:\Apps\Журнал ВК\VKMagazine\VKMagazine\obj\Debug\VKMagazine.Resources.AppResources.resources
+D:\Apps\Журнал ВК\VKMagazine\VKMagazine\obj\Debug\VKMagazine.csproj.GenerateResource.Cache
+D:\Apps\Журнал ВК\VKMagazine\VKMagazine\obj\Debug\VKMagazine.dll
+D:\Apps\Журнал ВК\VKMagazine\VKMagazine\obj\Debug\VKMagazine.pdb
+D:\Apps\Журнал ВК\VKMagazine\VKMagazine\obj\Debug\XapCacheFile.xml
+D:\Apps\Журнал ВК\VKMagazine\VKMagazine\obj\Debug\GroupListPage.g.cs
+D:\Apps\Журнал ВК\VKMagazine\VKMagazine\Bin\Debug\Icons\busines.png
+D:\Apps\Журнал ВК\VKMagazine\VKMagazine\obj\Debug\GroupsSelectPage.g.cs
+D:\svn\JournalVk\VKMagazine\VKMagazine\Bin\Debug\Assets\ApplicationIcon.png
+D:\svn\JournalVk\VKMagazine\VKMagazine\Bin\Debug\Assets\Tiles\FlipCycleTileLarge.png
+D:\svn\JournalVk\VKMagazine\VKMagazine\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png
+D:\svn\JournalVk\VKMagazine\VKMagazine\Bin\Debug\Assets\Tiles\FlipCycleTileSmall.png
+D:\svn\JournalVk\VKMagazine\VKMagazine\Bin\Debug\Assets\Tiles\IconicTileMediumLarge.png
+D:\svn\JournalVk\VKMagazine\VKMagazine\Bin\Debug\Assets\Tiles\IconicTileSmall.png
+D:\svn\JournalVk\VKMagazine\VKMagazine\Bin\Debug\Icons\busines.png
+D:\svn\JournalVk\VKMagazine\VKMagazine\Bin\Debug\VKMagazine.dll
+D:\svn\JournalVk\VKMagazine\VKMagazine\Bin\Debug\VKMagazine.pdb
+D:\svn\JournalVk\VKMagazine\VKMagazine\Bin\Debug\AppManifest.xaml
+D:\svn\JournalVk\VKMagazine\VKMagazine\Bin\Debug\Properties\WMAppManifest.xml
+D:\svn\JournalVk\VKMagazine\VKMagazine\Bin\Debug\VKMagazine_Debug_AnyCPU.xap
+D:\svn\JournalVk\VKMagazine\VKMagazine\obj\Debug\App.g.cs
+D:\svn\JournalVk\VKMagazine\VKMagazine\obj\Debug\GroupListPage.g.cs
+D:\svn\JournalVk\VKMagazine\VKMagazine\obj\Debug\GroupsSelectPage.g.cs
+D:\svn\JournalVk\VKMagazine\VKMagazine\obj\Debug\MainPage.g.cs
+D:\svn\JournalVk\VKMagazine\VKMagazine\obj\Debug\VKMagazine.g.resources
+D:\svn\JournalVk\VKMagazine\VKMagazine\obj\Debug\VKMagazine.Resources.AppResources.resources
+D:\svn\JournalVk\VKMagazine\VKMagazine\obj\Debug\VKMagazine.csproj.GenerateResource.Cache
+D:\svn\JournalVk\VKMagazine\VKMagazine\obj\Debug\VKMagazine.dll
+D:\svn\JournalVk\VKMagazine\VKMagazine\obj\Debug\VKMagazine.pdb
+D:\svn\JournalVk\VKMagazine\VKMagazine\obj\Debug\XapCacheFile.xml
+D:\svn\JournalVk\VKMagazine\VKMagazine\obj\Debug\VKMagazine.csprojResolveAssemblyReference.cache
+D:\svn\JournalVk\VKMagazine\VKMagazine\Bin\Debug\RestSharp.WindowsPhone.dll
+D:\svn\JournalVk\VKMagazine\VKMagazine\Bin\Debug\RestSharp.WindowsPhone.xml
+D:\svn\JournalVk\VKMagazine\VKMagazine\Bin\Debug\Newtonsoft.Json.dll
+D:\svn\JournalVk\VKMagazine\VKMagazine\Bin\Debug\Newtonsoft.Json.xml
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\Assets\ApplicationIcon.png
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\Assets\Tiles\FlipCycleTileLarge.png
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\Assets\Tiles\FlipCycleTileSmall.png
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\Assets\Tiles\IconicTileMediumLarge.png
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\Assets\Tiles\IconicTileSmall.png
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\Icons\busines.png
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\VKMagazine.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\VKMagazine.pdb
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\AppManifest.xaml
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\VKMagazine_Debug_AnyCPU.xap
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\Newtonsoft.Json.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\RestSharp.WindowsPhone.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\Newtonsoft.Json.xml
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\RestSharp.WindowsPhone.xml
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\obj\Debug\App.g.cs
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\obj\Debug\GroupListPage.g.cs
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\obj\Debug\GroupsSelectPage.g.cs
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\obj\Debug\MainPage.g.cs
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\obj\Debug\VKMagazine.g.resources
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\obj\Debug\VKMagazine.Resources.AppResources.resources
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\obj\Debug\VKMagazine.csproj.GenerateResource.Cache
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\obj\Debug\VKMagazine.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\obj\Debug\VKMagazine.pdb
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\obj\Debug\XapCacheFile.xml
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\Telerik.Windows.Controls.ImageEditor.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\Telerik.Windows.Controls.Primitives.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\Telerik.Windows.Core.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\Telerik.Windows.Data.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\Telerik.Windows.Controls.Input.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\Telerik.Windows.Controls.DataVisualization.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\System.Windows.Interactivity.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\Telerik.Windows.Controls.ImageEditor.pdb
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\Telerik.Windows.Controls.ImageEditor.xml
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\Telerik.Windows.Controls.Primitives.pdb
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\Telerik.Windows.Controls.Primitives.xml
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\Telerik.Windows.Core.pdb
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\Telerik.Windows.Core.xml
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\Telerik.Windows.Data.pdb
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\Telerik.Windows.Data.xml
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\Telerik.Windows.Controls.Input.pdb
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\Telerik.Windows.Controls.Input.xml
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\Telerik.Windows.Controls.DataVisualization.pdb
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\Telerik.Windows.Controls.DataVisualization.xml
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\de-DE\Telerik.Windows.Controls.ImageEditor.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\fr-FR\Telerik.Windows.Controls.ImageEditor.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\it-IT\Telerik.Windows.Controls.ImageEditor.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\de-DE\Telerik.Windows.Controls.Primitives.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\fr-FR\Telerik.Windows.Controls.Primitives.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\it-IT\Telerik.Windows.Controls.Primitives.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\de-DE\Telerik.Windows.Controls.Input.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\fr-FR\Telerik.Windows.Controls.Input.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\it-IT\Telerik.Windows.Controls.Input.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\de\System.Windows.Interactivity.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\en\System.Windows.Interactivity.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\es\System.Windows.Interactivity.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\fr\System.Windows.Interactivity.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\it\System.Windows.Interactivity.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\ja\System.Windows.Interactivity.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\ko\System.Windows.Interactivity.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\ru\System.Windows.Interactivity.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\obj\Debug\ImageViewPage.g.cs
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\System.Net.Http.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\System.Net.Http.Extensions.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\System.Net.Http.Primitives.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\System.Net.Http.xml
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\System.Net.Http.Extensions.xml
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\System.Net.Http.Primitives.xml
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\obj\Debug\VKMagazine.csprojResolveAssemblyReference.cache
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\Microsoft.Phone.Controls.Toolkit.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\ar-SA\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\az-Latn-AZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\be-BY\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\bg-BG\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\ca-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\cs-CZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\da-DK\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\de-DE\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\el-GR\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\en-GB\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\es-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\es-MX\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\et-EE\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\fa-IR\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\fi-FI\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\fil-PH\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\fr-CA\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\fr-FR\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\he-IL\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\hi-IN\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\hr-HR\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\hu-HU\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\id-ID\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\it-IT\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\ja-JP\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\kk-KZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\ko-KR\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\lt-LT\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\lv-LV\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\mk-MK\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\ms-MY\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\nb-NO\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\nl-NL\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\pl-PL\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\pt-BR\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\pt-PT\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\ro-RO\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\ru-RU\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\sk-SK\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\sl-SI\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\sq-AL\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\sr-Latn-CS\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\sv-SE\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\th-TH\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\tr-TR\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\uk-UA\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\uz-Latn-UZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\vi-VN\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\zh-CN\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\Bin\Debug\zh-TW\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\Журнал ВК\JournalVk\VKMagazine\VKMagazine\obj\Debug\Helpers\ImageWithLoading.g.cs
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\Assets\ApplicationIcon.png
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\Assets\Tiles\FlipCycleTileLarge.png
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\Assets\Tiles\FlipCycleTileSmall.png
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\Assets\Tiles\IconicTileMediumLarge.png
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\Assets\Tiles\IconicTileSmall.png
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\Icons\busines.png
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\VKMagazine.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\VKMagazine.pdb
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\AppManifest.xaml
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\Properties\WMAppManifest.xml
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\VKMagazine_Debug_AnyCPU.xap
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\Microsoft.Phone.Controls.Toolkit.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\Newtonsoft.Json.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\RestSharp.WindowsPhone.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\System.Net.Http.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\Telerik.Windows.Controls.Input.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\Telerik.Windows.Controls.DataVisualization.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\Newtonsoft.Json.xml
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\RestSharp.WindowsPhone.xml
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\System.Net.Http.xml
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\System.Net.Http.Extensions.xml
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\System.Net.Http.Primitives.xml
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\Telerik.Windows.Controls.ImageEditor.pdb
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\Telerik.Windows.Controls.ImageEditor.xml
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\Telerik.Windows.Controls.Primitives.pdb
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\Telerik.Windows.Controls.Primitives.xml
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\Telerik.Windows.Core.pdb
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\Telerik.Windows.Core.xml
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\Telerik.Windows.Data.pdb
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\Telerik.Windows.Data.xml
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\Telerik.Windows.Controls.Input.pdb
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\Telerik.Windows.Controls.Input.xml
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\Telerik.Windows.Controls.DataVisualization.pdb
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\Telerik.Windows.Controls.DataVisualization.xml
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\ar-SA\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\az-Latn-AZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\be-BY\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\bg-BG\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\ca-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\cs-CZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\da-DK\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\de-DE\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\el-GR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\en-GB\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\es-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\es-MX\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\et-EE\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\fa-IR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\fi-FI\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\fil-PH\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\fr-CA\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\fr-FR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\he-IL\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\hi-IN\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\hr-HR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\hu-HU\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\id-ID\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\it-IT\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\ja-JP\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\kk-KZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\ko-KR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\lt-LT\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\lv-LV\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\mk-MK\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\ms-MY\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\nb-NO\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\nl-NL\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\pl-PL\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\pt-BR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\pt-PT\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\ro-RO\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\ru-RU\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\sk-SK\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\sl-SI\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\sq-AL\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\sr-Latn-CS\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\sv-SE\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\th-TH\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\tr-TR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\uk-UA\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\uz-Latn-UZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\vi-VN\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\zh-CN\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\zh-TW\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\de-DE\Telerik.Windows.Controls.ImageEditor.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\fr-FR\Telerik.Windows.Controls.ImageEditor.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\it-IT\Telerik.Windows.Controls.ImageEditor.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\de-DE\Telerik.Windows.Controls.Primitives.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\fr-FR\Telerik.Windows.Controls.Primitives.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\it-IT\Telerik.Windows.Controls.Primitives.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\de-DE\Telerik.Windows.Controls.Input.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\fr-FR\Telerik.Windows.Controls.Input.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\it-IT\Telerik.Windows.Controls.Input.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\de\System.Windows.Interactivity.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\en\System.Windows.Interactivity.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\es\System.Windows.Interactivity.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\fr\System.Windows.Interactivity.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\it\System.Windows.Interactivity.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\ja\System.Windows.Interactivity.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\ko\System.Windows.Interactivity.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\ru\System.Windows.Interactivity.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\Bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\obj\Debug\VKMagazine.csprojResolveAssemblyReference.cache
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\obj\Debug\App.g.cs
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\obj\Debug\GroupListPage.g.cs
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\obj\Debug\GroupsSelectPage.g.cs
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\obj\Debug\Helpers\ImageWithLoading.g.cs
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\obj\Debug\ImageViewPage.g.cs
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\obj\Debug\MainPage.g.cs
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\obj\Debug\VKMagazine.g.resources
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\obj\Debug\VKMagazine.Resources.AppResources.resources
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\obj\Debug\VKMagazine.csproj.GenerateResource.Cache
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\obj\Debug\VKMagazine.dll
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\obj\Debug\VKMagazine.pdb
+C:\Users\Vitalii\Dropbox\Work\ЖурналВк\ЖурналВк\VKMagazine\obj\Debug\XapCacheFile.xml
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\Assets\ApplicationIcon.png
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\Assets\Tiles\FlipCycleTileLarge.png
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\Assets\Tiles\FlipCycleTileSmall.png
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\Assets\Tiles\IconicTileMediumLarge.png
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\Assets\Tiles\IconicTileSmall.png
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\Icons\busines.png
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\VKMagazine.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\VKMagazine.pdb
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\AppManifest.xaml
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\VKMagazine_Debug_AnyCPU.xap
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\Microsoft.Phone.Controls.Toolkit.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\Newtonsoft.Json.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\RestSharp.WindowsPhone.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\System.Net.Http.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\System.Net.Http.Extensions.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\System.Net.Http.Primitives.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\Telerik.Windows.Controls.ImageEditor.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\Telerik.Windows.Controls.Primitives.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\Telerik.Windows.Core.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\Telerik.Windows.Data.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\Telerik.Windows.Controls.Input.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\Telerik.Windows.Controls.DataVisualization.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\System.Windows.Interactivity.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\Newtonsoft.Json.xml
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\RestSharp.WindowsPhone.xml
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\System.Net.Http.xml
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\System.Net.Http.Extensions.xml
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\System.Net.Http.Primitives.xml
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\Telerik.Windows.Controls.ImageEditor.pdb
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\Telerik.Windows.Controls.ImageEditor.xml
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\Telerik.Windows.Controls.Primitives.pdb
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\Telerik.Windows.Controls.Primitives.xml
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\Telerik.Windows.Core.pdb
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\Telerik.Windows.Core.xml
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\Telerik.Windows.Data.pdb
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\Telerik.Windows.Data.xml
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\Telerik.Windows.Controls.Input.pdb
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\Telerik.Windows.Controls.Input.xml
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\Telerik.Windows.Controls.DataVisualization.pdb
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\Telerik.Windows.Controls.DataVisualization.xml
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\ar-SA\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\az-Latn-AZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\be-BY\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\bg-BG\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\ca-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\cs-CZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\da-DK\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\de-DE\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\el-GR\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\en-GB\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\es-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\es-MX\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\et-EE\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\fa-IR\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\fi-FI\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\fil-PH\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\fr-CA\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\fr-FR\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\he-IL\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\hi-IN\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\hr-HR\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\hu-HU\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\id-ID\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\it-IT\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\ja-JP\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\kk-KZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\ko-KR\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\lt-LT\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\lv-LV\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\mk-MK\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\ms-MY\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\nb-NO\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\nl-NL\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\pl-PL\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\pt-BR\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\pt-PT\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\ro-RO\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\ru-RU\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\sk-SK\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\sl-SI\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\sq-AL\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\sr-Latn-CS\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\sv-SE\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\th-TH\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\tr-TR\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\uk-UA\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\uz-Latn-UZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\vi-VN\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\zh-CN\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\zh-TW\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\de-DE\Telerik.Windows.Controls.ImageEditor.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\fr-FR\Telerik.Windows.Controls.ImageEditor.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\it-IT\Telerik.Windows.Controls.ImageEditor.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\de-DE\Telerik.Windows.Controls.Primitives.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\fr-FR\Telerik.Windows.Controls.Primitives.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\it-IT\Telerik.Windows.Controls.Primitives.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\de-DE\Telerik.Windows.Controls.Input.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\fr-FR\Telerik.Windows.Controls.Input.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\it-IT\Telerik.Windows.Controls.Input.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\de\System.Windows.Interactivity.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\en\System.Windows.Interactivity.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\es\System.Windows.Interactivity.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\fr\System.Windows.Interactivity.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\it\System.Windows.Interactivity.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\ja\System.Windows.Interactivity.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\ko\System.Windows.Interactivity.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\ru\System.Windows.Interactivity.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\Bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+D:\Apps\ЖурналВк\VKMagazine\obj\Debug\App.g.cs
+D:\Apps\ЖурналВк\VKMagazine\obj\Debug\GroupListPage.g.cs
+D:\Apps\ЖурналВк\VKMagazine\obj\Debug\GroupsSelectPage.g.cs
+D:\Apps\ЖурналВк\VKMagazine\obj\Debug\Helpers\ImageWithLoading.g.cs
+D:\Apps\ЖурналВк\VKMagazine\obj\Debug\ImageViewPage.g.cs
+D:\Apps\ЖурналВк\VKMagazine\obj\Debug\MainPage.g.cs
+D:\Apps\ЖурналВк\VKMagazine\obj\Debug\VKMagazine.g.resources
+D:\Apps\ЖурналВк\VKMagazine\obj\Debug\VKMagazine.Resources.AppResources.resources
+D:\Apps\ЖурналВк\VKMagazine\obj\Debug\VKMagazine.csproj.GenerateResource.Cache
+D:\Apps\ЖурналВк\VKMagazine\obj\Debug\VKMagazine.dll
+D:\Apps\ЖурналВк\VKMagazine\obj\Debug\VKMagazine.pdb
+D:\Apps\ЖурналВк\VKMagazine\obj\Debug\XapCacheFile.xml
+D:\Apps\ЖурналВк\VKMagazine\obj\Debug\VkAuthPage.g.cs
+D:\Apps\ЖурналВк\VKMagazine\obj\Debug\VKMagazine.csprojResolveAssemblyReference.cache
+D:\svn\ВК журнал\VKMagazine\obj\Debug\VKMagazine.csprojResolveAssemblyReference.cache
+D:\svn\ВК журнал\VKMagazine\obj\Debug\App.g.cs
+D:\svn\ВК журнал\VKMagazine\obj\Debug\GroupListPage.g.cs
+D:\svn\ВК журнал\VKMagazine\obj\Debug\GroupsSelectPage.g.cs
+D:\svn\ВК журнал\VKMagazine\obj\Debug\Helpers\ImageWithLoading.g.cs
+D:\svn\ВК журнал\VKMagazine\obj\Debug\ImageViewPage.g.cs
+D:\svn\ВК журнал\VKMagazine\obj\Debug\MainPage.g.cs
+D:\svn\ВК журнал\VKMagazine\obj\Debug\VkAuthPage.g.cs
+D:\svn\ВК журнал\VKMagazine\obj\Debug\VKMagazine.g.resources
+D:\svn\ВК журнал\VKMagazine\obj\Debug\VKMagazine.Resources.AppResources.resources
+D:\svn\ВК журнал\VKMagazine\obj\Debug\VKMagazine.csproj.GenerateResource.Cache
+D:\svn\ВК журнал\VKMagazine\obj\Debug\VKMagazine.dll
+D:\svn\ВК журнал\VKMagazine\obj\Debug\VKMagazine.pdb
+D:\svn\ВК журнал\VKMagazine\Bin\Debug\Assets\ApplicationIcon.png
+D:\svn\ВК журнал\VKMagazine\Bin\Debug\Assets\Tiles\FlipCycleTileLarge.png
+D:\svn\ВК журнал\VKMagazine\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png
+D:\svn\ВК журнал\VKMagazine\Bin\Debug\Assets\Tiles\FlipCycleTileSmall.png
+D:\svn\ВК журнал\VKMagazine\Bin\Debug\Assets\Tiles\IconicTileMediumLarge.png
+D:\svn\ВК журнал\VKMagazine\Bin\Debug\Assets\Tiles\IconicTileSmall.png
+D:\svn\ВК журнал\VKMagazine\Bin\Debug\Icons\busines.png
+D:\svn\ВК журнал\VKMagazine\Bin\Debug\VKMagazine.dll
+D:\svn\ВК журнал\VKMagazine\Bin\Debug\VKMagazine.pdb
+D:\svn\ВК журнал\VKMagazine\Bin\Debug\AppManifest.xaml
+D:\svn\ВК журнал\VKMagazine\Bin\Debug\Properties\WMAppManifest.xml
+D:\svn\ВК журнал\VKMagazine\Bin\Debug\VKMagazine_Debug_AnyCPU.xap
+D:\svn\ВК журнал\VKMagazine\Bin\Debug\Microsoft.Phone.Controls.Toolkit.dll
+D:\svn\ВК журнал\VKMagazine\Bin\Debug\Newtonsoft.Json.dll
+D:\svn\ВК журнал\VKMagazine\Bin\Debug\RestSharp.WindowsPhone.dll
+D:\svn\ВК журнал\VKMagazine\Bin\Debug\System.Net.Http.dll
+D:\svn\ВК журнал\VKMagazine\Bin\Debug\System.Net.Http.Extensions.dll
+D:\svn\ВК журнал\VKMagazine\Bin\Debug\System.Net.Http.Primitives.dll
+D:\svn\ВК журнал\VKMagazine\Bin\Debug\Newtonsoft.Json.xml
+D:\svn\ВК журнал\VKMagazine\Bin\Debug\RestSharp.WindowsPhone.xml
+D:\svn\ВК журнал\VKMagazine\Bin\Debug\System.Net.Http.xml
+D:\svn\ВК журнал\VKMagazine\Bin\Debug\System.Net.Http.Extensions.xml
+D:\svn\ВК журнал\VKMagazine\Bin\Debug\System.Net.Http.Primitives.xml
+D:\svn\ВК журнал\VKMagazine\obj\Debug\XapCacheFile.xml
+D:\svn\ВК журнал\VKMagazine\Bin\Debug\Microsoft.Phone.Controls.dll
+D:\svn\ВК журнал\VKMagazine\obj\Debug\Helpers\ZoomingImage.g.cs
+D:\svn\ВК журнал\VKMagazine\obj\Debug\FriendsSharePage.g.cs
+D:\svn\ВК журнал\VKMagazine\Bin\Debug\KawagoeToolkit.dll
+D:\svn\ВК журнал\VKMagazine\Bin\Debug\KawagoeToolkit.pdb
+D:\svn\ВК журнал\VKMagazine\obj\Debug\SettignsPage.g.cs
+D:\svn\ВК журнал\VKMagazine\obj\Debug\SplashScreenPage.g.cs

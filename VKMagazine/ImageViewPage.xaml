@@ -1,0 +1,50 @@
+﻿<!--<phone:PhoneApplicationPage-->
+<toolkit:BasePage
+    x:Class="VKMagazine.ImageViewPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:local="clr-namespace:VKMagazine.Helpers"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+    
+  
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <!--<Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>-->
+    
+
+            <Grid x:Name="ContentPanel">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+        <toolkit:FlipView  x:Name="HorizontalFlipView" Visibility="Visible" 
+                              
+                              Grid.Row="1" SelectionChanged="HorizontalFlipView_SelectionChanged"
+                             >
+            <toolkit:FlipView.ItemTemplate>
+                <DataTemplate>
+
+                    <local:ZoomingImage SourceUrl="{Binding OnlineUri}" Update="AA"></local:ZoomingImage>
+
+                </DataTemplate>
+            </toolkit:FlipView.ItemTemplate>
+
+        </toolkit:FlipView>
+
+        </Grid>
+</toolkit:BasePage>
+<!--</phone:PhoneApplicationPage>-->

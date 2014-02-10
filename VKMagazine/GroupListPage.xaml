@@ -1,0 +1,89 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="VKMagazine.GroupListPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:toolkit ="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Name="TitleTextBlock" Text="Подборки и группы" Style="{StaticResource PhoneTextTitle2Style}" Foreground="White"/>
+            <!--<TextBox  Name="SearchTextBox" InputScope="Search"  Visibility="Collapsed" LostFocus="SearchTextBox_LostFocus" KeyDown="SearchTextBox_KeyDown"  > </TextBox>-->
+            <toolkit:PhoneTextBox  ActionIcon="Icons/feature.search.dar.png" Name="SearchTextBox" InputScope="Search"  Visibility="Collapsed" LostFocus="SearchTextBox_LostFocus" KeyDown="SearchTextBox_KeyDown" GotFocus="SearchTextBox_GotFocus"  ></toolkit:PhoneTextBox>
+            <Button Visibility="Collapsed" Padding="0" FontSize="16" Width="115" Height="65" Content="Добавить" Background="Green"></Button>
+        </StackPanel>
+        
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <phone:LongListSelector Name="LongListSelector" ItemsSource="{Binding}" HorizontalContentAlignment="Stretch" SelectionChanged="LongListSelector_SelectionChanged">
+                <phone:LongListSelector.ItemTemplate>
+                    <DataTemplate >
+                        <Grid Margin="0,0,0,7">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition  Width="Auto"></ColumnDefinition>
+                                <ColumnDefinition Width="300"></ColumnDefinition>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Tap="OnListItemTap" Source="{Binding ImageSrc}" Width="90" Height="90" VerticalAlignment="Center" Margin="0,0,10,0"  />
+                            <TextBlock Grid.Column="1" Tap="OnListItemTap" Text="{Binding ListGroupName}" VerticalAlignment="Center" TextWrapping="Wrap" Style="{StaticResource PhoneTextTitle2Style}"  />
+                            <TextBlock Grid.Column="1" Tap="OnListItemTap" Text="{Binding CurrentSelectedCount, Mode=TwoWay}" Visibility="{Binding Visible}" VerticalAlignment="Bottom" TextWrapping="Wrap" Margin="14,0,0,2" FontSize="17" FontFamily="Courier New" />
+                            <CheckBox Grid.Column="2" IsChecked="{Binding IsSelected, Mode=TwoWay}" HorizontalAlignment="Right"  VerticalAlignment="Center" Visibility="{Binding Visible}" Checked="CheckBox_Checked_1" Unchecked="CheckBox_Unchecked_1"  />
+                        </Grid>
+                        
+                        
+                        <!--<StackPanel HorizontalAlignment="Stretch">
+                            <StackPanel  Orientation="Horizontal" Margin="0,2"  >
+                                <Image Source="{Binding ImageSrc}" Width="90" Height="90" VerticalAlignment="Center" Margin="0,0,10,0" Tap="Image_Tap_1"  />
+                                <StackPanel VerticalAlignment="Bottom" Width="300" Tap="StackPanel_Tap_1">
+                                    <TextBlock Text="{Binding ListGroupName}" VerticalAlignment="Top" TextWrapping="Wrap" Style="{StaticResource PhoneTextTitle2Style}"  />
+                                    <TextBlock Text="{Binding CurrentSelectedCount, Mode=TwoWay}" VerticalAlignment="Bottom" TextWrapping="Wrap" Margin="14,0,0,0" FontSize="17" FontFamily="Courier New" />
+                                </StackPanel>
+                                <CheckBox IsChecked="{Binding IsSelected, Mode=TwoWay}" HorizontalAlignment="Right"  VerticalAlignment="Center" Visibility="{Binding Visible}" Checked="CheckBox_Checked_1" Unchecked="CheckBox_Unchecked_1"  />
+                            </StackPanel>
+                        </StackPanel>-->
+                    </DataTemplate>
+                </phone:LongListSelector.ItemTemplate>
+                
+            </phone:LongListSelector>
+            <phone:LongListSelector Name="SearchLongListSelector" Grid.Row="1" Visibility="Collapsed" ItemRealized="SearchLongListSelector_ItemRealized" SelectionChanged="SearchLongListSelector_SelectionChanged">
+                <phone:LongListSelector.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel HorizontalAlignment="Stretch">
+                            <StackPanel  Orientation="Horizontal" Margin="0,2" >
+                                <Image  Width="80" Height="80" Stretch="UniformToFill" VerticalAlignment="Center" Margin="0,0,5,0">
+                                    <Image.Source>
+                                        <BitmapImage UriSource="{Binding ImageSrc}" CreateOptions="BackgroundCreation"/>
+                                    </Image.Source>
+                                </Image>
+                                <!--<StackPanel VerticalAlignment="Bottom" Width="300">-->
+                                <TextBlock Text="{Binding ListGroupName}" VerticalAlignment="Center" TextWrapping="Wrap" Style="{StaticResource PhoneTextTitle3Style}" Width="230"  />
+                                <!--<TextBlock Text="{Binding CurrentSelectedCount}" VerticalAlignment="Bottom" TextWrapping="Wrap" Margin="12,0,0,0" FontSize="15" FontFamily="Courier New" />-->
+                                <!--</StackPanel>-->
+                                <Button  Padding="0" FontSize="16" Width="115" Height="65" Content="{Binding ButtonText, Mode=TwoWay}" Background="{Binding ButtomColor, Mode=TwoWay}" Click="Button_Click_1"></Button>
+                                <!--<CheckBox IsChecked="{Binding IsSelected, Mode=TwoWay}" HorizontalAlignment="Right"  VerticalAlignment="Center" Visibility="{Binding Visible}" Unchecked="CheckBox_Unchecked_1" Checked="CheckBox_Checked_1" />-->
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </phone:LongListSelector.ItemTemplate>
+            </phone:LongListSelector>
+            
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>
