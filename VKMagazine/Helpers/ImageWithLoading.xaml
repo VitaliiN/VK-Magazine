@@ -11,9 +11,20 @@
              x:Name="myImageWithLoading">
 
     <Grid x:Name="LayoutRoot" >
-        <Image x:Name="temporaryImage" Source="/Icons/spash_logo.png" Height="150" Width="150"/>
+        <Grid.Resources>
+            <Storyboard x:Name="myStoryboard"  RepeatBehavior="1x">
+                <DoubleAnimation
+        Storyboard.TargetName="MainImage"
+        Storyboard.TargetProperty="Opacity"
+        From="0.0" To="1.0" Duration="0:0:3"
+        AutoReverse="False" RepeatBehavior="1x" />
+            </Storyboard>
+        </Grid.Resources>
+        <Image Visibility="Visible" x:Name="temporaryImage" Source="/Icons/magazine.png" Height="150" Width="150"/>
         <Image  Source="{Binding Source,ElementName=myImageWithLoading}"  ImageOpened="RemoteImage_OnLoaded"  Stretch="UniformToFill" Name="MainImage" Loaded="MainImage_Loaded">
-            
+            <Image.Resources>
+               
+            </Image.Resources>
         </Image>
     </Grid>
 </UserControl>

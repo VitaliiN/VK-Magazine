@@ -12,10 +12,27 @@ using Kawagoe.Storage;
 
 namespace VKMagazine.ViewModels
 {
-    public class SrcBig
+    public class SrcBig : INotifyPropertyChanged
     {
+        private bool _isNeedToUpdate;
+
         public string OnlineUri { get; set; }
         public string IsoStoreUri { get; set; }
+        public double Height { get; set; }
+        public double Width { get; set; }
+        public bool IsNeedToUpdate
+        {
+            get
+            {
+                return _isNeedToUpdate;
+            }
+            set
+            {
+               
+                    _isNeedToUpdate = value;
+                    NotifyPropertyChanged();
+            }
+        }
         public object OnlineUriCached
         {
             get
@@ -24,6 +41,16 @@ namespace VKMagazine.ViewModels
                     return OnlineUri;
                 else
                     return ImageCache.Default.Get(OnlineUri);
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        private void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
+        {
+            PropertyChangedEventHandler handler = PropertyChanged;
+            if (null != handler)
+            {
+                handler(this, new PropertyChangedEventArgs(propertyName));
             }
         }
     }
@@ -37,7 +64,7 @@ namespace VKMagazine.ViewModels
         private String _groupImage;
         private string _groupName;
         private string _favouriteIcon;
-
+  
 
         public PostDetailsViewModel()
         {
@@ -305,12 +332,53 @@ namespace VKMagazine.ViewModels
                     if (_src_big[0].OnlineUri.Contains("isostore"))
                         return _src_big[0].OnlineUri;
                     else
-                        return ImageCache.Default.Get(_src_big[0].OnlineUri);
+                    {
+                        BitmapImage res =(BitmapImage) ImageCache.Default.Get(_src_big[0].OnlineUri);
+                        //res.CreateOptions = BitmapCreateOptions.BackgroundCreation;
+                        return res;
+                    }
+                    
                 }
                 return null;
             }
         }
 
+        public double FirstScaledHeight
+        {
+            get
+            {
+                if ((_src_big != null && _src_big.Count > 0 && _src_big.Count % 2 == 1))
+                {
+                    return _src_big[0].Height / MinScaleKoeff-20;
+                }
+                else
+                    return 0;
+            }
+        }
+
+        public double FirstScaledWidth
+        {
+            get
+            {
+                if ((_src_big != null && _src_big.Count > 0 && _src_big.Count % 2 == 1))
+                {
+                    return _src_big[0].Width / MinScaleKoeff ;
+                }
+                else
+                    return 0;
+            }
+        }
+
+        private double MinScaleKoeff
+        {
+            get
+            {
+                double xKoeff = _src_big[0].Width / (Helpers.ScreenSizeHelper.ScreenWidth -10)  ;
+                return xKoeff;
+                //double yKoeff = Helpers.ScreenSizeHelper.ScreenHeight / _src_big[0].Height;
+                //return Math.Min(xKoeff, yKoeff);
+            }
+        }
 
         public string isNeedShowBigPicture
         {

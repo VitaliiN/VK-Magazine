@@ -54,6 +54,23 @@ namespace VKMagazine.Helpers
 
 
 
+        public bool IsNeedToUpdate
+        {
+            get { return (bool)GetValue(IsNeedToUpdateProperty); }
+            set 
+            {
+                SetValue(IsNeedToUpdateProperty, value);
+                if (value == true)
+                    ConfigureImage();
+            }
+        }
+
+        // Using a DependencyProperty as the backing store for IsNeedToUpdate.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty IsNeedToUpdateProperty =
+            DependencyProperty.Register("IsNeedToUpdate", typeof(bool), typeof(ZoomingImage), new PropertyMetadata(false));
+
+        
+
         public string Update
         {
             get { return (string)GetValue(UpdateProperty); }
@@ -74,11 +91,19 @@ namespace VKMagazine.Helpers
             InitializeComponent();
             LayoutRoot.DataContext = this;
             Loaded += ZoomingImage_Loaded;
+            this.SizeChanged += ZoomingImage_SizeChanged;
+            
             //imageDocument.SetBinding(Image.SourceProperty, new System.Windows.Data.Binding
             //{
             //    Source=this,
             //    Path = new PropertyPath(
             
+        }
+
+        void ZoomingImage_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            ConfigureImage();
+            //throw new NotImplementedException();
         }
 
         void ZoomingImage_Loaded(object sender, RoutedEventArgs e)
@@ -328,7 +353,7 @@ namespace VKMagazine.Helpers
                 //CoerceScale(true);
                 //ResizeImage(true, _coercedScale);
                 ConfigureImage();
-
+                temporaryImage.Visibility = Visibility.Collapsed;
             }
             else
             {

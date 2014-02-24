@@ -15,17 +15,18 @@ using System.Windows.Media.Imaging;
 using VKMagazine.DAO;
 using VKMagazine.Response;
 using VKMagazine.Helpers;
+using System.Threading;
 
 namespace VKMagazine.ViewModels
 {
     public class NewsViewModel : INotifyPropertyChanged
     {
-        private const int MAX_GROUP_COUNT_FOR_AUTH_USER = 15;
+        private const int MAX_GROUP_COUNT_FOR_AUTH_USER = 10;
         private const int MAX_GROUP_COUNT_FOR_SIMPLE_USER = 25;
         //private static readonly Regex UrlRegex = new Regex(@"(?#Protocol)(?:(?:ht|f)tp(?:s?)\:\/\/|~/|/)?(?#Username:Password)(?:\w+:\w+@)?(?#Subdomains)(?:(?:[-\w]+\.)+(?#TopLevel Domains)(?:com|org|net|gov|mil|biz|info|mobi|name|aero|jobs|museum|travel|[a-z]{2}))(?#Port)(?::[\d]{1,5})?(?#Directories)(?:(?:(?:/(?:[-\w~!$+|.,=]|%[a-f\d]{2})+)+|/)+|\?|#)?(?#Query)(?:(?:\?(?:[-\w~!$+|.,*:]|%[a-f\d{2}])+=(?:[-\w~!$+|.,*:=]|%[a-f\d]{2})*)(?:&(?:[-\w~!$+|.,*:]|%[a-f\d{2}])+=(?:[-\w~!$+|.,*:=]|%[a-f\d]{2})*)*)*(?#Anchor)(?:#(?:[-\w~!$+|.,*:=]|%[a-f\d]{2})*)?");
         private int AddedPages = 0;
-       // public static int offset=0;
-        private static int diff=0;
+        // public static int offset=0;
+        private static int diff = 0;
         private ObservableCollection<PostDetailsViewModel> _news;
         private bool _isLoading;
         private int count;
@@ -70,9 +71,10 @@ namespace VKMagazine.ViewModels
 
         public async Task LoadPage(bool isNeedLoadNextPage)
         {
-           
+            List<Group> selectedGroups = new List<Group>(DbSingleton.Instance.Groups.Where(x => x.isSelected == true));
+            if (isNeedLoadNextPage == false) totalOffset = 0;
             IsLoading = true;
-            await GetPostsfFromGroups(isNeedLoadNextPage);
+            await GetPostsfFromGroups(selectedGroups, isNeedLoadNextPage);
             IsLoading = false;
             //if (pageNumber == 1) this.TwitterCollection.Clear();
 
@@ -91,15 +93,19 @@ namespace VKMagazine.ViewModels
             }
         }
 
-        public async Task GetPostsfFromGroups(bool isNeedLoadNextPage = false)
+        public async Task GetPostsfFromGroups(List<Group> selectedGroups, bool isNeedLoadNextPage = false)
         {
-            int MAX_GROUP_COUNT=0;
+            int MAX_GROUP_COUNT = 0;
             if (Helpers.VkHelper.IsUserAuthenticated())
                 MAX_GROUP_COUNT = MAX_GROUP_COUNT_FOR_AUTH_USER;
             else
                 MAX_GROUP_COUNT = MAX_GROUP_COUNT_FOR_SIMPLE_USER;
-            List<Group> selectedGroups = DbSingleton.Instance.Groups.Where(x => x.isSelected == true).ToList();
-            Task fillGroupsTask = FillGroupsNameAndImages(selectedGroups);
+
+            if (selectedGroups.Count == 0)
+                return;
+            // Task fillGroupsTask = FillGroupsNameAndImages(selectedGroups);
+            //  await fillGroupsTask;
+            await FillGroupsNameAndImages(selectedGroups);
             List<PostDetails> postsResponse = new List<PostDetails>();
             if (isNeedLoadNextPage == false) currentGroupNumber = 0;
             int count = selectedGroups.Count;
@@ -119,9 +125,9 @@ namespace VKMagazine.ViewModels
             {
                 count = 1;
             }
-            if (isNeedLoadNextPage ==true && selectedGroups.Count<MAX_GROUP_COUNT)
+            if (isNeedLoadNextPage == true && selectedGroups.Count < MAX_GROUP_COUNT)
                 totalOffset += count;
-            else if(selectedGroups.Count<MAX_GROUP_COUNT)
+            else if (selectedGroups.Count < MAX_GROUP_COUNT)
                 totalOffset = 0;
             System.Net.Http.HttpClient httpClient = new System.Net.Http.HttpClient();
             List<Task<string>> responseListTask = new List<Task<string>>();
@@ -134,18 +140,19 @@ namespace VKMagazine.ViewModels
                     currentGroupNumber = 0;
                 for (; currentGroupNumber < selectedGroups.Count; currentGroupNumber++)
                 {
-                    
-                    string req = String.Format("https://api.vk.com/method/wall.get?count={0}&filter=owner&owner_id=-{1}&offset={2}", count, selectedGroups[currentGroupNumber].VkId, totalOffset);
-                    if (Helpers.VkHelper.IsUserAuthenticated())
-                        req += "&access_token=" + Helpers.VkHelper.CurrentAccess_token;
-                    //responseList.Add(await httpClient.GetStringAsync(req));
-                    if (Helpers.VkHelper.IsUserAuthenticated())
+
+                    string req = String.Format("https://api.vk.com/method/wall.get?count={0}&filter=owner&owner_id=-{1}&offset={2}&v=3.0", count, selectedGroups[currentGroupNumber].VkId, totalOffset);
+                    if (Helpers.VkHelper.IsUserAuthenticated() && selectedGroups[currentGroupNumber].IsClosed == true)
                     {
+                        req += "&access_token=" + Helpers.VkHelper.CurrentAccess_token;
+                        //  //responseList.Add(await httpClient.GetStringAsync(req));
+
                         try
                         {
-                            //string response = await httpClient.GetStringAsync(req);
-                            //responseList.Add(response);
-                            responseListTask.Add(httpClient.GetStringAsync(req));
+                            string response = await httpClient.GetStringAsync(req);
+                            responseList.Add(response);
+                            //Thread.Sleep(120);
+                            //responseListTask.Add(httpClient.GetStringAsync(req));
                         }
                         catch
                         {
@@ -161,7 +168,7 @@ namespace VKMagazine.ViewModels
                         break;
                     }
                 }
-                if (currentGroupNumber >= selectedGroups.Count-1 && selectedGroups.Count>= MAX_GROUP_COUNT)
+                if (currentGroupNumber >= selectedGroups.Count - 1 && selectedGroups.Count >= MAX_GROUP_COUNT)
                 {
                     currentGroupNumber = 0;
 
@@ -169,22 +176,28 @@ namespace VKMagazine.ViewModels
                 }
                 //if (!Helpers.VkHelper.IsUserAuthenticated())
                 {
-                    await Task.WhenAll(responseListTask.ToArray());
-                    foreach (var tsk in responseListTask)
-                        responseList.Add(tsk.Result);
-                }
-                //foreach (var grp in selectedGroups)
-                //{
+                    try
+                    {
+                        await Task.WhenAll(responseListTask.ToArray());
+                    }
+                    catch (Exception e)
+                    {
+                        Debug.WriteLine(e.Message);
+                    }
 
-                //    string req = String.Format("https://api.vk.com/method/wall.get?count={0}&filter=owner&owner_id=-{1}&offset={2}", count, grp.VkId, totalOffset);
-                //    if(Helpers.VkHelper.IsUserAuthenticated())
-                //        req+="&access_token=" + Helpers.VkHelper.CurrentAccess_token;
-                //    //responseList.Add(await httpClient.GetStringAsync(req));
-                //        responseListTask.Add(httpClient.GetStringAsync(req));
-                //}
-                    
-                
-               
+                    foreach (var tsk in responseListTask)
+                    {
+                        try
+                        {
+                            responseList.Add(tsk.Result);
+                        }
+                        catch
+                        {
+                            continue;
+                        }
+                    }
+
+                }
                 Debug.WriteLine("Get response for groups = " + st.ElapsedMilliseconds);
                 st.Restart();
                 //foreach (Task<string> task in responseListTask)
@@ -194,16 +207,19 @@ namespace VKMagazine.ViewModels
                     jsonPostsArray.Add(JsonConvert.DeserializeObjectAsync<JObject>(responseJson));
                 }
                 await Task.WhenAll(jsonPostsArray.ToArray());
-                foreach (var tsk in jsonPostsArray)
+                //foreach (var tsk in jsonPostsArray)
+                for (int i = 0; i < jsonPostsArray.Count; i++)
                 {
                     //JObject response = await JsonConvert.DeserializeObjectAsync<JObject>(responseJson);
                     JArray jsonPosts;
                     try
                     {
-                        jsonPosts = (tsk.Result["response"] as JArray);
+
+                        jsonPosts = (jsonPostsArray[i].Result["response"] as JArray);
+                        int groupPostsCount = jsonPosts[0].Value<int>();
                         if (jsonPosts == null)
                         {
-                            if (tsk.Result.First.First.First.First.Value<Int32>() == 5)
+                            if (jsonPostsArray[i].Result.First.First.First.First.Value<Int32>() == 5)
                             {
                                 MessageBox.Show("Сеанс истек, перезайдите в аккаунт вк");
                                 return;
@@ -211,12 +227,34 @@ namespace VKMagazine.ViewModels
                             continue;
                         }
                         jsonPosts.RemoveAt(0);
+                        if (groupPostsCount < totalOffset + count)
+                        {
+                            if (jsonPosts.Count > 0)
+                            {
+                                PostDetails finiShedmodel = jsonPosts[0].ToObject<PostDetails>();
+                                Group finishedGroup = selectedGroups.FirstOrDefault(x => x.VkId == Math.Abs(finiShedmodel.from_id));
+                            }
+                            else
+                            {
+                                jsonPostsArray.RemoveAt(i);
+                                selectedGroups.RemoveAt(i);
+                                i--;
+                            }
+
+                            //if (finishedGroup != null)
+                            //{
+                            //    selectedGroups.Remove(finishedGroup);
+                            //    if (selectedGroups.Count(x => x.isSelected) == 0)
+                            //        return;
+                            //    //DbSingleton.Instance.SubmitChanges();
+                            //}
+                        }
                     }
                     catch (NullReferenceException)
                     {
                         continue;
                     }
-                    
+
                     foreach (JObject postDetails in jsonPosts)
                     {
                         PostDetails model = postDetails.ToObject<PostDetails>();
@@ -224,14 +262,14 @@ namespace VKMagazine.ViewModels
                         {
                             if (model.attachments.Any(x => x.type == "photo"))
                             {
-                                if (!SettignsHelper.IsNeedToHidePostsToGroups)
+                                if (SettignsHelper.IsNeedToHidePostsToGroups)
                                 {
                                     if (model.text.Contains("[club") || model.text.Contains("vk.com"))
                                         continue;
                                 }
-                                if (!SettignsHelper.IsNeedToHidePostsWithLinks)
+                                if (SettignsHelper.IsNeedToHidePostsWithLinks)
                                 {
-                                    if (model.text.Contains("http://"))
+                                    if (model.text.Contains("http://") || model.text.Contains("https://"))
                                         continue;
                                 }
                                 postsResponse.Add(model);
@@ -242,7 +280,7 @@ namespace VKMagazine.ViewModels
                 Debug.WriteLine("Transoforms response to objects = " + st.ElapsedMilliseconds);
                 postsResponse = postsResponse.OrderByDescending(x => x.date).ToList();
                 List<FavouritedPost> favouritePosts = DbSingleton.Instance.FavouritedPosts.ToList();
-                await fillGroupsTask;
+                //await fillGroupsTask;
                 foreach (PostDetails post in postsResponse)
                 {
 
@@ -261,7 +299,7 @@ namespace VKMagazine.ViewModels
                             FavouriteIcon = favIcon,//Helpers.GroupsHelper.NoFavouritedIcon,
                             //Src_big_image = new ObservableCollection<BitmapImage>(post.attachments.Where(x => x.type == "photo").Select(x => new BitmapImage(new Uri(x.photo.src_big)))),
                             //Src_big = new ObservableCollection<string>(post.attachments.Where(x => x.type == "photo").Select(x => x.photo.src_big)),
-                            Src_big = new ObservableCollection<SrcBig>(post.attachments.Where(x => x.type == "photo").Select(x => new SrcBig() { OnlineUri = x.photo.src_big })),
+                            Src_big = new ObservableCollection<SrcBig>(post.attachments.Where(x => x.type == "photo").Select(x => new SrcBig() { OnlineUri = x.photo.src_big, Height = x.photo.height, Width = x.photo.width })),
                             Src_small = new ObservableCollection<string>(post.attachments.Where(x => x.type == "photo").Select(x => x.photo.src_small)),
                             Id = post.id,
                             Group_id = post.from_id,
@@ -274,7 +312,7 @@ namespace VKMagazine.ViewModels
             {
                 Debug.WriteLine(e.Message + "\n " + e.StackTrace);
             }
-            if (postsResponse.Count < 5)
+            if (postsResponse.Count < 5 && selectedGroups.Count > 0)
             {
                 // if(diff<0)
                 AddedPages += postsResponse.Count;
@@ -283,7 +321,8 @@ namespace VKMagazine.ViewModels
                     AddedPages = 0;
                     return;
                 }
-                await LoadPage(true);
+                await GetPostsfFromGroups(selectedGroups, true);
+                //await LoadPage(true);
             }
         }
         /// <summary>
@@ -305,12 +344,20 @@ namespace VKMagazine.ViewModels
             //string request = 
             try
             {
-                string response = await httpClinet.GetStringAsync(String.Format("https://api.vk.com/method/groups.getById?group_ids={0}", groups_ids));
-                GetGroupsById responseGroups = await JsonConvert.DeserializeObjectAsync<GetGroupsById>(response);
-                for (int i = 0; i < responseGroups.response.Count; i++)
+                if (selectedGroups.Any(x => x.Name == null || x.Image == null))
                 {
-                    selectedGroups[i].Image = responseGroups.response[i].photo;
-                    selectedGroups[i].Name = responseGroups.response[i].name;
+                    string response = await httpClinet.GetStringAsync(String.Format("https://api.vk.com/method/groups.getById?fields=can_see_all_posts&group_ids={0}", groups_ids));
+                    GetGroupsById responseGroups = await JsonConvert.DeserializeObjectAsync<GetGroupsById>(response);
+                    for (int i = 0; i < responseGroups.response.Count; i++)
+                    {
+                        selectedGroups[i].Image = responseGroups.response[i].photo;
+                        selectedGroups[i].Name = responseGroups.response[i].name;
+                        selectedGroups[i].СanSeePosts = responseGroups.response[i].can_see_all_posts;
+                        selectedGroups[i].IsClosed = responseGroups.response[i].is_closed;
+                        if (selectedGroups[i].IsClosed == true)
+                        {
+                        }
+                    }
                 }
             }
             catch (Exception e)

@@ -26,8 +26,8 @@
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Text="Журнал ВК" Style="{StaticResource PhoneTextNormalStyle}"/>
             <TextBlock Text="Настройки" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
-            <toolkit:ToggleSwitch Name="LinksToggle"  Header="Показывать посты с внешними ссылками "  Padding="0" Margin="0,50,0,0" Content="Выключено" Height="Auto" SwitchForeground="#FF10E019" Checked="LinksToggle_Checked" Unchecked="LinksToggle_Unchecked" ></toolkit:ToggleSwitch>
-            <toolkit:ToggleSwitch Name="GroupsToggle" Header="Показывать посты с ссылками на другие сообщества"  Padding="0" Margin="0,10,0,0" Content="Выключено" Height="Auto" SwitchForeground="#FF10E019" Background="Black" Unchecked="GroupsToggle_Unchecked" Checked="GroupsToggle_Checked" ></toolkit:ToggleSwitch>
+            <toolkit:ToggleSwitch Name="LinksToggle"  Header="Скрывать посты с внешними ссылками "  Padding="0" Margin="0,50,0,0" Content="Выключено" Height="Auto" SwitchForeground="#FFAECD65" Checked="LinksToggle_Checked" Unchecked="LinksToggle_Unchecked" ></toolkit:ToggleSwitch>
+            <toolkit:ToggleSwitch Name="GroupsToggle" Header="Скрывать посты с ссылками на другие сообщества"  Padding="0" Margin="0,10,0,0" Content="Выключено" Height="Auto" SwitchForeground="#FFAECD65" Background="Black" Unchecked="GroupsToggle_Unchecked" Checked="GroupsToggle_Checked" ></toolkit:ToggleSwitch>
         </StackPanel>
         <!--<TextBlock Grid.Row="1" HorizontalAlignment="Center"  VerticalAlignment="Center" Text="Не показывать записи, содержащие:" FontSize="25"></TextBlock>-->
         <!--ContentPanel - place additional content here-->

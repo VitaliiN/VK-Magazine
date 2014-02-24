@@ -17,7 +17,6 @@ namespace VKMagazine.Response
         public int gid { get; set; }
         public bool is_closed { get; set; }
         public bool is_member { get; set; }
-     
-        
+        public bool can_see_all_posts { get; set; } 
     }
 }

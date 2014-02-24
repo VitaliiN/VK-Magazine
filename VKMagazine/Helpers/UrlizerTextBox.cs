@@ -58,7 +58,7 @@ namespace VKMagazine.Helpers
                     // Add matched url
                     Uri uri = null;
                     string rawUrl = match.Value;
-                    if (rawUrl.StartsWith("[club"))
+                    if (rawUrl.StartsWith("[club") || rawUrl.StartsWith("[id"))
                     {
                         if (!Uri.TryCreate("http://vk.com/" + match.Groups[3].ToString(), UriKind.Absolute, out uri))
                         {

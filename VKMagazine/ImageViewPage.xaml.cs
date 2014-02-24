@@ -22,12 +22,14 @@ namespace VKMagazine
     public partial class ImageViewPage : BasePage
     {
         BitmapImage _image = new BitmapImage();
+        private ObservableCollection<SrcBig> itemss;
         
         public ImageViewPage()
         {
             InitializeComponent();
              this.Loaded += MainPage_Loaded;
              this.OrientationChanged += MainPage_OrientationChanged;
+             itemss = new ObservableCollection<SrcBig>();
 
             //List<ViewModel> items = new List<ViewModel>();
 
@@ -47,6 +49,9 @@ namespace VKMagazine
         }
         void MainPage_OrientationChanged(object sender, OrientationChangedEventArgs e)
         {
+            foreach (var t in itemss)
+                t.IsNeedToUpdate = true;
+
         }
 
 
@@ -64,7 +69,7 @@ namespace VKMagazine
             {
                 if (NavigationContext.QueryString.TryGetValue("Url", out imageUrl))
                 {
-                    ObservableCollection<SrcBig> itemss;// = App.viewModel.News.FirstOrDefault(x => x.Src_big_All.Any(y => y.OnlineUri == imageUrl)).Src_big_All;
+                   // ObservableCollection<SrcBig> itemss;// = App.viewModel.News.FirstOrDefault(x => x.Src_big_All.Any(y => y.OnlineUri == imageUrl)).Src_big_All;
 
                     if (imageUrl.Contains("isostore"))
                     {
@@ -89,7 +94,7 @@ namespace VKMagazine
 
         private void HorizontalFlipView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            //myStoryboard.Begin();
             //_image=new System.Windows.Media.Imaging.BitmapImage(new Uri(((FlipView)sender).SelectedItem.ToString(),UriKind.Relative));
            // imageDocument.Source=_image;
            // var it = HorizontalFlipView.Items.ToList();

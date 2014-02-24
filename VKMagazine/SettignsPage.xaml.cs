@@ -15,6 +15,8 @@ namespace VKMagazine
     {
         private const string ON = "Включено";
         private const string OFF = "Выключено";
+        private bool firstIsneedTohidePostsWithlinks;
+        private bool firstIsNeedToHidePostsWithGroups;
         public SettignsPage()
         {
             InitializeComponent();
@@ -22,10 +24,17 @@ namespace VKMagazine
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            LinksToggle.IsChecked = SettignsHelper.IsNeedToHidePostsWithLinks;
+            
+            LinksToggle.IsChecked = firstIsneedTohidePostsWithlinks = SettignsHelper.IsNeedToHidePostsWithLinks;
             LinksToggle.Content = LinksToggle.IsChecked.Value ? ON : OFF;
-            GroupsToggle.IsChecked = SettignsHelper.IsNeedToHidePostsToGroups;
+            GroupsToggle.IsChecked = firstIsNeedToHidePostsWithGroups = SettignsHelper.IsNeedToHidePostsToGroups;
             GroupsToggle.Content = GroupsToggle.IsChecked.Value ? ON : OFF;
+        }
+
+        protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)
+        {
+            if (firstIsNeedToHidePostsWithGroups != SettignsHelper.IsNeedToHidePostsToGroups || firstIsneedTohidePostsWithlinks != SettignsHelper.IsNeedToHidePostsWithLinks)
+                NewsRefreshHelper.isNeedToRefresh = true;
         }
 
         private void LinksToggle_Checked(object sender, RoutedEventArgs e)

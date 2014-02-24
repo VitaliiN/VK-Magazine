@@ -41,7 +41,10 @@ namespace VKMagazine
         private bool isMailShareTapped = false;
         private bool isExpandeButtonClick;
         private bool isNetworkAvailable;
+        private ApplicationBar menuApplicationBar;
+        private ApplicationBar newsApplicationBar;
         private string sharePostUrl;
+        private ApplicationBarIconButton appbarSettings;
 
         ProgressIndicator progressIndicator;
         private const string More = "Далее";
@@ -50,7 +53,7 @@ namespace VKMagazine
         {
             InitializeComponent();
             NewsLongListSelector.SelectionChanged += NewsLongListSelector_SelectionChanged;
-            BitmapImage test = new BitmapImage();
+            
             Loaded += MainPage_Loaded;
         }
 
@@ -59,9 +62,13 @@ namespace VKMagazine
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        void MainPage_Loaded(object sender, RoutedEventArgs e)
+        async void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
-            SetProgressIndicator();
+
+           
+            ApplicationBar.IsVisible = true;
+            
+            
             DeviceNetworkInformation.NetworkAvailabilityChanged += new EventHandler<NetworkNotificationEventArgs>(ChangeNetworkIdDetected);
             var userStoreForApplication = IsolatedStorageFile.GetUserStoreForApplication();
             if (!userStoreForApplication.DirectoryExists(FavouriteFolder))
@@ -108,27 +115,41 @@ namespace VKMagazine
         {
             if (ApplicationBar == null)
             {
-                ApplicationBar = new ApplicationBar();
-
+                //ApplicationBar = new ApplicationBar();
+                menuApplicationBar = new Microsoft.Phone.Shell.ApplicationBar();
+                appbarSettings = new ApplicationBarIconButton(new Uri("/Icons/feature.settings.png", UriKind.Relative))
+                {
+                    Text = "Настройки"
+                };
+                appbarSettings.Click += AppBarButtonSettingsClick;
+                menuApplicationBar.Buttons.Add(appbarSettings);
+                newsApplicationBar = new Microsoft.Phone.Shell.ApplicationBar();
                 var appBarButtonGotTop =
                     new ApplicationBarIconButton(new Uri("/Icons/top.png", UriKind.Relative))
                     {
                         Text = "В начало"
                     };
                 appBarButtonGotTop.Click += AppBarButtonToTop;
-                ApplicationBar.Buttons.Add(appBarButtonGotTop);
+                newsApplicationBar.Buttons.Add(appBarButtonGotTop);
                 var appBarButtonRefresh =
                     new ApplicationBarIconButton(new Uri("/Icons/refresh.png", UriKind.Relative))
                     {
                         Text = "Обновить"
                     };
                 appBarButtonRefresh.Click += AppBarButtonRefresh;
-                ApplicationBar.Buttons.Add(appBarButtonRefresh);
+                newsApplicationBar.Buttons.Add(appBarButtonRefresh);
                 if (MainPivot.SelectedItem == MenuPivotPage)
-                    ApplicationBar.IsVisible = false;
+                    ApplicationBar = menuApplicationBar;
+                else
+                    ApplicationBar = newsApplicationBar;
             }
 
 
+        }
+
+        private void AppBarButtonSettingsClick(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/SettignsPage.xaml", UriKind.Relative));
         }
 
         /// <summary>
@@ -143,7 +164,7 @@ namespace VKMagazine
                 if (DbSingleton.Instance.Groups.Any(x => x.isSelected))
                 {
                     App.viewModel.News.Clear();
-                    await App.viewModel.LoadPage(false);
+                    await LoadDataToNewsPivotPage();
                 }
                 else
                 {
@@ -161,7 +182,7 @@ namespace VKMagazine
         {
             try
             {
-                if (NewsLongListSelector.ItemsSource != null)
+                if (NewsLongListSelector.ItemsSource != null && NewsLongListSelector.ItemsSource.Count>0)
                     NewsLongListSelector.ScrollTo(NewsLongListSelector.ItemsSource[0]);
             }
             catch
@@ -253,6 +274,14 @@ namespace VKMagazine
             else if (MessageBoxResult.Cancel == MessageBox.Show("Выйти из приложения?", "Выход", MessageBoxButton.OKCancel))
             {
                 e.Cancel = true;
+                
+            }
+            else
+            {
+                int count = NavigationService.BackStack.Count();
+                for (int i = 0; i < count ;i++ )
+                    NavigationService.RemoveBackEntry();
+                
             }
 
         }
@@ -299,7 +328,6 @@ namespace VKMagazine
             {
                 Debug.WriteLine(ex.Message+ " "+ ex.StackTrace);
             }
-                
         }
 
         /// <summary>
@@ -307,11 +335,13 @@ namespace VKMagazine
         /// </summary>
         void SetProgressIndicator()
         {
-            //var progressIndicator = SystemTray.ProgressIndicator;
-            //if (progressIndicator != null)
-            //{
-            //    return;
-            //}
+            SystemTray.IsVisible = true;
+            var progressIndicator = SystemTray.ProgressIndicator;
+            if (progressIndicator != null)
+            {
+                return;
+            }
+            App.viewModel.IsLoading = false;
             progressIndicator = new ProgressIndicator();
             SystemTray.SetProgressIndicator(this, progressIndicator);
             Binding binding = new Binding("IsLoading") { Source = App.viewModel };
@@ -319,6 +349,12 @@ namespace VKMagazine
             binding = new Binding("IsLoading") { Source = App.viewModel };
             BindingOperations.SetBinding(progressIndicator, ProgressIndicator.IsIndeterminateProperty, binding);
             progressIndicator.Text = "Загрузка новостей";
+            SystemTray.ProgressIndicator = progressIndicator;
+        }
+
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            ApplicationBar.IsVisible = false;
         }
 
         /// <summary>
@@ -328,10 +364,9 @@ namespace VKMagazine
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
             DataLoaderHelper.LoadDataToDabase();
+            
             CreateApplicationBar();
             SetNormalbackground();
-
-
             if (VkHelper.IsUserAuthenticated())
                 VkLogOut.Visibility = System.Windows.Visibility.Visible;
             else
@@ -352,7 +387,7 @@ namespace VKMagazine
                 NoInternetMessage.Visibility = Visibility.Collapsed;
             string pivotPage = string.Empty;
             List<Group> selectedGroups = DbSingleton.Instance.Groups.Where(x => x.isSelected == true).ToList();
-            if (selectedGroups.Count > 0 && App.viewModel == null)
+            if (selectedGroups.Count > 0 && App.viewModel.News.Count == 0)
             {
                 MainPivot.SelectedItem = NewsPivotPage;
                 await LoadDataToNewsPivotPage();
@@ -364,6 +399,7 @@ namespace VKMagazine
                     int pivotPageint = Int32.Parse(pivotPage);
                     if ((Helpers.PivotPages)pivotPageint == PivotPages.NewsPivot && isDataLoadedFromSelectedGroups == false)
                     {
+                        
                         MainPivot.SelectedItem = NewsPivotPage;
                         await LoadDataToNewsPivotPage();
                         isDataLoadedFromSelectedGroups = true;
@@ -420,11 +456,22 @@ namespace VKMagazine
         /// <returns></returns>
         private async Task LoadDataToNewsPivotPage()
         {
-            App.viewModel = new NewsViewModel();
+           
+            if (App.viewModel == null)
+                App.viewModel = new NewsViewModel();
+
+            App.viewModel.News.Clear();
+            
+            NewsLongListSelector.ItemsSource = null;
             App.viewModel.IsLoading = true;
+            SetProgressIndicator();
+            
             await App.viewModel.LoadPage(false);
-            NewsLongListSelector.ItemsSource = App.viewModel.News;
-            App.viewModel.IsLoading = false;
+            if(!isInFavourite)
+                NewsLongListSelector.ItemsSource = App.viewModel.News;
+           
+
+             App.viewModel.IsLoading = false;
         }
 
         /// <summary>
@@ -540,14 +587,20 @@ namespace VKMagazine
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void MainPivot_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private async void MainPivot_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
-
             if (MainPivot.SelectedItem == NewsPivotPage && ((string)NewsPivotPage.Header) == "Новости")
             {
+                if (NewsRefreshHelper.isNeedToRefresh && isNetworkAvailable)
+                {
+                    NewsRefreshHelper.isNeedToRefresh = false;
+                    NewsLongListSelector.ItemsSource = null;
+                    await LoadDataToNewsPivotPage();
+                }
                 NoInternetMessage.Visibility = isNetworkAvailable ? Visibility.Collapsed : Visibility.Visible;
                 isInFavourite = false;
+                ApplicationBar = newsApplicationBar;
+                //ApplicationBar.Buttons.RemoveAt(0);
                 if (App.viewModel != null)
                 {
                     NewsLongListSelector.ItemsSource = App.viewModel.News;
@@ -564,14 +617,24 @@ namespace VKMagazine
             }
             if (MainPivot.SelectedItem == MenuPivotPage)
             {
-                if (ApplicationBar != null)
-                    ApplicationBar.IsVisible = false;
+                ApplicationBar = menuApplicationBar;
+                ApplicationBar.IsVisible = true;
+                //if (ApplicationBar != null && ApplicationBar.Buttons.Count==2)
+                //{
+                //    ApplicationBar.Buttons.Insert(0, appbarSettings);
+                    
+                        
+                //}
+                    //ApplicationBar.IsVisible = false;
                 NewsPivotPage.Header = "Новости";
+                
             }
             if (MainPivot.SelectedItem == NewsPivotPage && isInFavourite == false)
                 ApplicationBar.IsVisible = true;
             if (MainPivot.SelectedItem == NewsPivotPage && isInFavourite && ApplicationBar != null)
+            {
                 ApplicationBar.IsVisible = false;
+            }
         }
 
         /// <summary>
@@ -756,6 +819,8 @@ namespace VKMagazine
                 List<Group> selectedgrps = DbSingleton.Instance.Groups.Where(x => x.isSelected == true).ToList();
                 NewsLongListSelector.ItemsSource = null;
                 App.viewModel.News.Clear();
+                SettignsHelper.IsNeedToShowSplashScreen = true;
+                NavigationService.Navigate(new Uri("/SplashScreenPage.xaml", UriKind.Relative));                
             }
         }
 

@@ -157,7 +157,7 @@ namespace VKMagazine.Helpers
                 {
                     Group g = DbSingleton.Instance.Groups.SingleOrDefault(x => x.VkId == grpId);
                     if (g == null)
-                        userGroupsCategory.Groups.Add(new Group() { VkId = grpId, Category = userGroupsCategory });
+                        userGroupsCategory.Groups.Add(new Group() { VkId = grpId, Category = userGroupsCategory,isUserGroups=true });
 
                 }
                 DbSingleton.Instance.SubmitChanges();

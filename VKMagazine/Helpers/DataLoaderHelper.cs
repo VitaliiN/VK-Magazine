@@ -9,7 +9,7 @@ namespace VKMagazine.Helpers
 {
     public static class DataLoaderHelper
     {
-        public const int CURRENT_DATABASE_VERSION = 1;
+        public const int CURRENT_DATABASE_VERSION = 4;
 
         private static string[] Categories = { "СМИ", "Hi-Tech", "Образ Жизни", "", "", "" };
         private static int[] smiIds = { 15755094, 20035339, 11982368, 29534144, 24199209, 11546691, 17842936, 20169232, 25106701, 24136539, 15548215, 23482909, 25232578, 28261334 };

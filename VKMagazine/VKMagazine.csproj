@@ -117,7 +117,9 @@
       <DependentUpon>ImageWithLoading.xaml</DependentUpon>
     </Compile>
     <Compile Include="Helpers\MyImageConverter.cs" />
+    <Compile Include="Helpers\NewsRefreshHelper.cs" />
     <Compile Include="Helpers\PivotPages.cs" />
+    <Compile Include="Helpers\ScreenSizeHelper.cs" />
     <Compile Include="Helpers\SettignsHelper.cs" />
     <Compile Include="Helpers\UrlizerTextBox.cs" />
     <Compile Include="Helpers\VkHelper.cs" />
@@ -249,6 +251,7 @@
     <Content Include="Icons\appbar.social.sharethis.png" />
     <Content Include="Icons\arrow_4.png" />
     <Content Include="Icons\auto_and_moto.png" />
+    <Content Include="Icons\bg.png" />
     <Content Include="Icons\bin.png" />
     <Content Include="Icons\busines.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -261,6 +264,7 @@
     <Content Include="Icons\drawer_shadow.9.png" />
     <Content Include="Icons\feature.search.dar.png" />
     <Content Include="Icons\feature.search.png" />
+    <Content Include="Icons\feature.settings.png" />
     <Content Include="Icons\goroskop.png" />
     <Content Include="Icons\icon.png" />
     <Content Include="Icons\icon_logout.png" />
@@ -277,6 +281,7 @@
     <Content Include="Icons\icon_sm_black_news.png" />
     <Content Include="Icons\icon_sm_catalog.png" />
     <Content Include="Icons\icon_sm_news.png" />
+    <Content Include="Icons\icon_splash.png" />
     <Content Include="Icons\ic_drawer.png" />
     <Content Include="Icons\ic_launcher.png" />
     <Content Include="Icons\isk.png" />
@@ -284,6 +289,7 @@
     <Content Include="Icons\lifestyle.png" />
     <Content Include="Icons\list_icon.png" />
     <Content Include="Icons\login_bg.png" />
+    <Content Include="Icons\magazine.png" />
     <Content Include="Icons\mail.png" />
     <Content Include="Icons\mail_pressed.PNG" />
     <Content Include="Icons\man.png" />

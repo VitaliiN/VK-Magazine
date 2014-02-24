@@ -52,7 +52,7 @@ namespace VKMagazine.Helpers
                 else
                 {
                     BitmapImage image = new BitmapImage();
-                    //image.CreateOptions = BitmapCreateOptions.None;
+                   // image.CreateOptions = BitmapCreateOptions.None;
                     image.UriSource = new Uri(path);
                     //image.BeginInit();
                     //BitmapImage image = new BitmapImage(new Uri(path));

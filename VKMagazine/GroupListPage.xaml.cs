@@ -34,19 +34,21 @@ namespace VKMagazine
         private const string JOIN_GROUP = "Вступить";
         private bool isNetworkAvailable;
 
+        private Category collectionGroups;
+        private List<Group> selectedGroups;
         private bool isAddButtonClicked;
         private bool isInSearching = false;
         private ProgressIndicator progressIndicator;
         private bool isCheckBoxPushed = false;
         private int _pageNumber = 0;
-        private bool _isLoading;
-        private  SearchGroupViewModel searchModel = new SearchGroupViewModel();
-        
+        private SearchGroupViewModel searchModel = new SearchGroupViewModel();
+
         //public ObservableCollection<GroupListItemViewModel> groupList { get; set; }
         public GroupListPage()
         {
-            
+
             InitializeComponent();
+            collectionGroups = DbSingleton.Instance.Categories.FirstOrDefault(x => x.isCollection);
             this.Loaded += new RoutedEventHandler(GroupListPage_Loaded);
             ApplicationBar = ApplicationBarBuilder.BuildAppBar(ApplicationBar);
             var appBarButtonSearch =
@@ -55,9 +57,9 @@ namespace VKMagazine
                      Text = "Найти группу"
                  };
             appBarButtonSearch.Click += AppBarButtonSearch_Click;
-            ApplicationBar.Buttons.Insert(0,appBarButtonSearch);
+            ApplicationBar.Buttons.Insert(0, appBarButtonSearch);
             SetProgressIndicator();
-           // groupList = new ObservableCollection<GroupListItemViewModel>();
+            // groupList = new ObservableCollection<GroupListItemViewModel>();
         }
 
         private void AppBarButtonSearch_Click(object sender, EventArgs e)
@@ -95,6 +97,9 @@ namespace VKMagazine
         {
             if (isInSearching)
             {
+                //DbSingleton.Instance.Groups.InsertAllOnSubmit(collectionGroups);
+                SearchTextBox.Visibility = Visibility.Collapsed;
+                DbSingleton.Instance.SubmitChanges();
                 this.Focus();
                 isInSearching = false;
                 ApplicationBar.IsVisible = true;
@@ -105,6 +110,19 @@ namespace VKMagazine
             }
             else
             {
+                if (selectedGroups.Count != DbSingleton.Instance.Groups.Count(x => x.isSelected == true))
+                {
+                    NewsRefreshHelper.isNeedToRefresh = true;
+                    return;
+                }
+                foreach (var group in DbSingleton.Instance.Groups.Where(x => x.isSelected == true))
+                {
+                    if (!selectedGroups.Any(x => x.GroupId == group.GroupId))
+                    {
+                        NewsRefreshHelper.isNeedToRefresh = true;
+                        break;
+                    }
+                }
                 NavigationService.GoBack();
                 //NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
             }
@@ -123,16 +141,17 @@ namespace VKMagazine
                     break;
                 case NetworkNotificationType.InterfaceDisconnected:
                     isNetworkAvailable = false;
-                   // NoInternetMessage.Visibility = Visibility.Visible;
+                    // NoInternetMessage.Visibility = Visibility.Visible;
                     break;
             }
         }
-        
+
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
+            selectedGroups = DbSingleton.Instance.Groups.Where(x => x.isSelected == true).ToList();
             isNetworkAvailable = await IsNetworkAvailable();
-            LongListSelector.ItemsSource =  await Helpers.CategoryHelper.GetCategories();
+            LongListSelector.ItemsSource = await Helpers.CategoryHelper.GetCategories();
 
         }
 
@@ -140,10 +159,10 @@ namespace VKMagazine
         {
             DbSingleton.Instance.SubmitChanges();
         }
-       
+
         private async void LongListSelector_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (isCheckBoxPushed == true && LongListSelector.SelectedItem!=null)
+            if (isCheckBoxPushed == true && LongListSelector.SelectedItem != null)
             {
                 GroupListItemViewModel selectedModel = (GroupListItemViewModel)LongListSelector.SelectedItem;
                 if (selectedModel.Enabled == false)
@@ -171,23 +190,35 @@ namespace VKMagazine
                 Stopwatch st = new Stopwatch();
                 st.Start();
                 //SubmitChangesAsync();
-                Scheduler.Dispatcher.Schedule(SubmitChangesAsync, TimeSpan.FromMilliseconds(300));
+                Scheduler.Dispatcher.Schedule(SubmitChangesAsync, TimeSpan.FromMilliseconds(100));
                 //DbSingleton.Instance.SubmitChanges();
-                Debug.WriteLine("SubmitChanges = " +st.ElapsedMilliseconds);
+                Debug.WriteLine("SubmitChanges = " + st.ElapsedMilliseconds);
                 isCheckBoxPushed = false;
                 LongListSelector.SelectedItem = null;
                 return;
             }
-            if (LongListSelector.SelectedItem != null && (LongListSelector.SelectedItem as GroupListItemViewModel).Enabled )
+            if (LongListSelector.SelectedItem != null && (LongListSelector.SelectedItem as GroupListItemViewModel).Enabled)
             {
-                if (!isNetworkAvailable)
+                try
                 {
-                    ShowMessageBoxNoInternet();
+                    GroupListItemViewModel selectedModel = (GroupListItemViewModel)LongListSelector.SelectedItem;
+                    if (!isNetworkAvailable)
+                    {
+                        if (DbSingleton.Instance.Categories.FirstOrDefault(x => x.CategoryId == selectedModel.Id).Groups.Any(x => x.Name == null))
+                        {
+                            ShowMessageBoxNoInternet();
+                            return;
+                        }
+                    }
+
+                    NavigationService.Navigate(new Uri("/GroupsSelectPage.xaml?selectedItem=" + selectedModel.Id, UriKind.Relative));
+                    LongListSelector.SelectedItem = null;
+
+                }
+                catch
+                {
                     return;
                 }
-                GroupListItemViewModel selectedModel = (GroupListItemViewModel)LongListSelector.SelectedItem;
-                NavigationService.Navigate(new Uri("/GroupsSelectPage.xaml?selectedItem=" + selectedModel.Id, UriKind.Relative));
-                LongListSelector.SelectedItem = null;
             }
 
             //LongListSelector.SelectedItem = null;
@@ -222,7 +253,7 @@ namespace VKMagazine
         private void SearchTextBox_LostFocus(object sender, RoutedEventArgs e)
         {
             TitleTextBlock.Text = "Список групп";
-            SearchTextBox.Visibility = Visibility.Collapsed;
+           // SearchTextBox.Visibility = Visibility.Collapsed;
             if (SearchLongListSelector.Visibility == Visibility.Collapsed)
             {
                 isInSearching = false;
@@ -234,7 +265,7 @@ namespace VKMagazine
         {
             if (e.Key == Key.Enter)
             {
-                
+
                 string _searchTerm = SearchTextBox.Text.Trim();
                 searchModel = new SearchGroupViewModel();
                 _pageNumber = 0;
@@ -254,12 +285,12 @@ namespace VKMagazine
             }
         }
 
-        private async Task SearchGroups(string _searchTerm,int ofsset=0)
+        private async Task SearchGroups(string _searchTerm, int ofsset = 0)
         {
             HttpClient client = new HttpClient();
             string request = String.Format("https://api.vk.com/method/groups.search?access_token={0}&q={1}&count={2}&offset={3}", VkHelper.CurrentAccess_token, _searchTerm, GROUPS_LOAD_COUNT, GROUPS_LOAD_COUNT * ofsset);
             string response = await client.GetStringAsync(request);
-            List<GroupResponse> FindedGroups = new List<GroupResponse>(); 
+            List<GroupResponse> FindedGroups = new List<GroupResponse>();
             JObject objResp = await JsonConvert.DeserializeObjectAsync<JObject>(response);
             JArray jsonPosts;
             try
@@ -273,14 +304,14 @@ namespace VKMagazine
             {
                 return;
             }
-            foreach(JObject grpInfo in jsonPosts)
+            foreach (JObject grpInfo in jsonPosts)
             {
                 FindedGroups.Add(grpInfo.ToObject<GroupResponse>());
             }
             foreach (var grp in FindedGroups)
             {
-               // string btnTxt = DbSingleton.Instance.Groups.FirstOrDefault(x=> x.VkId==grp.
-                bool isGroupInCollection = DbSingleton.Instance.Groups.Any(x => x.vkUserId == VkHelper.CurrentUserId && x.VkId == grp.gid && x.isFinded ==true);
+                // string btnTxt = DbSingleton.Instance.Groups.FirstOrDefault(x=> x.VkId==grp.
+                bool isGroupInCollection = DbSingleton.Instance.Groups.Any(x => x.vkUserId == VkHelper.CurrentUserId && x.VkId == grp.gid && x.isFinded == true);
                 if (grp.is_member)
                     continue;
                 searchModel.SearchedGroups.Add(new GroupListItemViewModel()
@@ -291,15 +322,15 @@ namespace VKMagazine
                     Id = grp.gid,
                     ListGroupName = HttpUtility.HtmlDecode(grp.name),
                     Visible = "Visible",
-                    IsClosed=grp.is_closed,
-                    ButtomColor =isGroupInCollection? "Red" : grp.is_closed? "Blue" : "Green",
-                    ButtonText = isGroupInCollection? DELETE_GROUP : grp.is_closed ? JOIN_GROUP : ADD_GROUP
+                    IsClosed = grp.is_closed,
+                    ButtomColor = isGroupInCollection ? "Red" : grp.is_closed ? "Blue" : "Green",
+                    ButtonText = isGroupInCollection ? DELETE_GROUP : grp.is_closed ? JOIN_GROUP : ADD_GROUP
                 });
             }
             SearchLongListSelector.ItemsSource = searchModel.SearchedGroups;
         }
 
-        private async void  SearchLongListSelector_ItemRealized(object sender, ItemRealizationEventArgs e)
+        private async void SearchLongListSelector_ItemRealized(object sender, ItemRealizationEventArgs e)
         {
             if (!searchModel.IsLoading && SearchLongListSelector.ItemsSource != null && SearchLongListSelector.ItemsSource.Count >= _offsetKnob)
             {
@@ -345,7 +376,8 @@ namespace VKMagazine
                 switch (selectedModel.ButtonText)
                 {
                     case ADD_GROUP:
-                        userGroupsCollection.Groups.Add(new Group()
+                        //userGroupsCollection.Groups.Add(new Group()
+                        collectionGroups.Groups.Add(new Group()
                         {
                             Image = selectedModel.ImageSrc.ToString(),
                             isFinded = true,
@@ -355,19 +387,19 @@ namespace VKMagazine
                         });
                         selectedModel.ButtonText = DELETE_GROUP;
                         selectedModel.ButtomColor = "Red";
-                        DbSingleton.Instance.SubmitChanges();
-                        Category userGroupsCollectionTest = DbSingleton.Instance.Categories.FirstOrDefault(x => x.VkUserId == VkHelper.CurrentUserId && x.isCollection == true);
+                        //DbSingleton.Instance.SubmitChanges();
                         break;
                     case DELETE_GROUP:
-                        Group groupToDelete = DbSingleton.Instance.Groups.FirstOrDefault(x => x.isFinded == true && x.VkId == selectedModel.Id);
+                        Group groupToDelete = collectionGroups.Groups.FirstOrDefault(x => x.isFinded && x.VkId == selectedModel.Id); //DbSingleton.Instance.Groups.FirstOrDefault(x => x.isFinded == true && x.VkId == selectedModel.Id);
                         if (groupToDelete == null)
                         {
                             MessageBox.Show("Ошибка при удалении группы");
                             SearchLongListSelector.SelectedItem = null;
                             return;
                         }
-                        DbSingleton.Instance.Groups.DeleteOnSubmit(groupToDelete);
-                        DbSingleton.Instance.SubmitChanges();
+                        collectionGroups.Groups.Remove(groupToDelete);
+                        //DbSingleton.Instance.Groups.DeleteOnSubmit(groupToDelete);
+                        //DbSingleton.Instance.SubmitChanges();
                         selectedModel.ButtonText = ADD_GROUP;
                         selectedModel.ButtomColor = "Green";
                         break;
@@ -381,12 +413,12 @@ namespace VKMagazine
                             return;
                         }
                         searchModel.SearchedGroups.Remove(selectedModel);
-                            
+
                         break;
                     default:
                         break;
                 }
-                
+
             }
             SearchLongListSelector.SelectedItem = null;
         }

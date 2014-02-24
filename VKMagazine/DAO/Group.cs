@@ -36,6 +36,10 @@ namespace VKMagazine.DAO
         public bool isFinded { get; set; }
         [Column]
         public string vkUserId { get; set; }
+        [Column]
+        public bool СanSeePosts { get; set; }
+        [Column]
+        public bool IsClosed { get; set; }
 
         [Association(Storage = "_category",
     ThisKey = "CategoryId", OtherKey = "CategoryId",IsForeignKey=true)]

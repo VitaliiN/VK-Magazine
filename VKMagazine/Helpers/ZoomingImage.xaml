@@ -35,6 +35,6 @@
 
             </Canvas>
             </ViewportControl>
-        <Image x:Name="temporaryImage" Source="/Icons/spash_logo.png" Height="150" Width="150"/>
+        <Image x:Name="temporaryImage" Source="/Icons/magazine.png" Height="150" Width="150"/>
     </Grid>
 </UserControl>

@@ -19,6 +19,8 @@ using VKMagazine.RequestWrapper;
 using VKMagazine.ViewModels;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Threading.Tasks;
+using Microsoft.Phone.Net.NetworkInformation;
 
 namespace VKMagazine
 {
@@ -27,25 +29,39 @@ namespace VKMagazine
 
         bool isCheck = false;
         bool isUncheck = false;
+        private List<Group> selectedGroups;
         private int catId;
+        private bool isNetworkAvailable;
 
         public GroupsSelectPage()
         {
             InitializeComponent();
             ApplicationBar = ApplicationBarBuilder.BuildAppBar(ApplicationBar);
+            ApplicationBar.IsVisible = false;
+            Loaded += GroupsSelectPage_Loaded;
             App.GroupSelectPageViewModel = new ObservableCollection<GroupListItemViewModel>();
         }
 
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        void GroupsSelectPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            ApplicationBar.IsVisible = true;
+        }
+
+        private async Task<bool> IsNetworkAvailable()
+        {
+            return NetworkInterface.GetIsNetworkAvailable() && NetworkInterface.NetworkInterfaceType != NetworkInterfaceType.None;
+        }
+
+        protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
             string categoryId = string.Empty;
-           
+            isNetworkAvailable = await IsNetworkAvailable();
             try
             {
                 if (NavigationContext.QueryString.TryGetValue("selectedItem", out categoryId))
                 {
-                   
+                    selectedGroups = DbSingleton.Instance.Groups.Where(x => x.isSelected == true).ToList();
                     catId = int.Parse(categoryId);
                     Category selectedCategory = DbSingleton.Instance.Categories.SingleOrDefault(x => x.CategoryId == catId);
                     if (selectedCategory == null)
@@ -53,7 +69,7 @@ namespace VKMagazine
                     CategoryName.Text = selectedCategory.CategoryName;
                     if (selectedCategory.isCollection && selectedCategory.Groups.Count > 0)
                     {
-                        var deleteAppBarButton = new ApplicationBarIconButton(new Uri("/Icons/delete.png",UriKind.Relative))
+                        var deleteAppBarButton = new ApplicationBarIconButton(new Uri("/Icons/delete.png", UriKind.Relative))
                             {
                                 Text = "Удалить группы"
                             };
@@ -63,23 +79,59 @@ namespace VKMagazine
 
                     if (App.GroupSelectPageViewModel.Count > 0)
                         return;
-                    List<Group> groups = DbSingleton.Instance.Groups.Where(x => x.CategoryId == catId).ToList();
-                    List<string> ids = new List<string>();
-                    foreach (var grp in groups)
+                    List<Group> slectedCategoruGroups = selectedCategory.Groups.ToList();
+                    if (isNetworkAvailable && slectedCategoruGroups.Any(x=>x.Name==null))
                     {
-                        ids.Add(grp.VkId.ToString());
+                        List<string> ids = new List<string>();
+                        foreach (var grp in slectedCategoruGroups)
+                        {
+                            ids.Add(grp.VkId.ToString());
+                        }
+                        string groups_ids = String.Join(",", ids.ToArray());
+                        Dictionary<string, string> parameters = new Dictionary<string, string>();
+                        parameters.Add("group_ids", groups_ids);
+                        ShowProgressBar();
+                        VkRequestWrapper.DoRequest<GetGroupsById>("groups.getById", parameters, Callback);
                     }
-                    string groups_ids = String.Join(",", ids.ToArray());
-                    Dictionary<string, string> parameters = new Dictionary<string, string>();
-                    parameters.Add("group_ids", groups_ids);
-                    ShowProgressBar();
-                    VkRequestWrapper.DoRequest<GetGroupsById>("groups.getById", parameters, Callback);
+                    else
+                    {
+                        foreach (var grp in slectedCategoruGroups)
+                        {
+                            App.GroupSelectPageViewModel.Add(new GroupListItemViewModel()
+                            {
+                                Enabled = false,
+                                ImageSrc = new Uri(grp.Image),
+                                IsSelected = grp.isSelected,
+                                Id = grp.VkId,
+                                ListGroupName = grp.Name,
+                                Visible = "Visible",
+                            });
+                        }
+                        LongListSelector.ItemsSource = App.GroupSelectPageViewModel;
+                    }
                     //GroupsHelper.CreateGroupsViewModel(catId);
                 }
             }
             catch
             {
                 MessageBox.Show("Ошибка получения данных о группах");
+            }
+        }
+
+        protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)
+        {
+            if (selectedGroups.Count != DbSingleton.Instance.Groups.Count(x => x.isSelected == true))
+            {
+                NewsRefreshHelper.isNeedToRefresh = true;
+                return;
+            }
+            foreach (var group in DbSingleton.Instance.Groups.Where(x => x.isSelected == true))
+            {
+                if (!selectedGroups.Any(x => x.GroupId == group.GroupId))
+                {
+                    NewsRefreshHelper.isNeedToRefresh = true;
+                    break;
+                }
             }
         }
 
@@ -92,7 +144,7 @@ namespace VKMagazine
                 {
                     foreach (var group in selectedGroups)
                     {
-                        var groupForDelete = DbSingleton.Instance.Groups.FirstOrDefault(x => x.vkUserId == VkHelper.CurrentUserId && x.isFinded == true && x.VkId==group.Id);
+                        var groupForDelete = DbSingleton.Instance.Groups.FirstOrDefault(x => x.vkUserId == VkHelper.CurrentUserId && x.isFinded == true && x.VkId == group.Id);
                         if (groupForDelete == null)
                         {
                             MessageBox.Show("Ошибка при удалении группы " + group.ListGroupName);
@@ -136,22 +188,31 @@ namespace VKMagazine
         public void Callback(IRestResponse<GetGroupsById> response, RestRequestAsyncHandle arg2)
         {
             //GetGroupsById response = JsonConvert.DeserializeObject<GetGroupsById>(arg1.Content);
+            FillAndShowGroups(response.Data.response);
+            
+            //throw new NotImplementedException();
+        }
+
+        private void FillAndShowGroups(List<GroupResponse> groups)
+        {
             try
             {
-                foreach (var grp in response.Data.response)
+                foreach (var grp in groups)
                 {
-                   
 
-                        App.GroupSelectPageViewModel.Add(new GroupListItemViewModel()
-                        {
-                            Enabled = false,
-                            ImageSrc = new Uri(grp.photo),
-                            IsSelected = DbSingleton.Instance.Groups.FirstOrDefault(x => x.VkId == grp.gid).isSelected,
-                            Id = grp.gid,
-                            ListGroupName = grp.name,
-                            Visible = "Visible",
-                        });
-                                     
+                    Group groupFromDb = DbSingleton.Instance.Groups.FirstOrDefault(x => x.VkId == grp.gid);
+                    App.GroupSelectPageViewModel.Add(new GroupListItemViewModel()
+                    {
+                        Enabled = false,
+                        ImageSrc = new Uri(grp.photo),
+                        IsSelected = groupFromDb.isSelected,
+                        Id = grp.gid,
+                        ListGroupName = grp.name,
+                        Visible = "Visible",
+                    });
+                    groupFromDb.Name = grp.name;
+                    groupFromDb.Image = grp.photo;
+                    DbSingleton.Instance.SubmitChanges();
                 }
                 HideProgressBar();
                 LongListSelector.ItemsSource = App.GroupSelectPageViewModel;
@@ -161,7 +222,6 @@ namespace VKMagazine
                 MessageBox.Show("Ошибка получения данных о группах");
                 HideProgressBar();
             }
-            //throw new NotImplementedException();
         }
 
         private void LongListSelector_SelectionChanged(object sender, SelectionChangedEventArgs e)

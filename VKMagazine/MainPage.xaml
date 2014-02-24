@@ -90,7 +90,7 @@
                 <!--<phone:LongListSelector Margin="0,0,-12,0" ItemsSource="{Binding Items}">-->
                 <!--<phone:LongListSelecstor.ItemTemplate>-->
                 <!--<DataTemplate>-->
-                <StackPanel Name="MainStackPanel">
+                <StackPanel Name="MainStackPanel" Background="Black">
                     <StackPanel Margin="0,0,0,17" Orientation="Horizontal" Name="VkAuth" Tap="LoginVk_Tap">
                         <local:ImageWithLoading  Source="/Icons/vk-wp.png" Width="49" Height="49" VerticalAlignment="Center" Name="LoginVkImage" />
                         <TextBlock Text="Войти вконтакте" TextWrapping="Wrap" Name="VkTextBlock" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
@@ -104,25 +104,24 @@
                         <Image Source="/Icons/icon_sl_star.png" Width="49" Height="49" VerticalAlignment="Center"/>
                         <TextBlock Text="Избранное" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}" />
                     </StackPanel>
-                    <StackPanel Margin="0,0,0,17" Orientation="Horizontal" Name="SettingMenuItem" Tap="SettingsMenuTap"  >
+                    <!--<StackPanel Margin="0,0,0,17" Orientation="Horizontal" Name="SettingMenuItem" Tap="SettingsMenuTap"  >
                         <Image Source="/Icons/icon_settings_pressed.png" Width="49" Height="49" VerticalAlignment="Center"/>
                         <TextBlock Text="Настройки" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}" />
-                    </StackPanel>
+                    </StackPanel>-->
                     <StackPanel Margin="0,0,0,17" Orientation="Horizontal" Name="ShareWithFriendsMenuItem" Tap="OnShareWithFriendsTap"  >
-                        <Image Source="/Icons/icon_share_pressed.png" Width="49" Height="49" VerticalAlignment="Center"/>
-                        <TextBlock Text="Поделиться с друзьями" Height="Auto" Width="388" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}" />
+                        <Image  Source="/Icons/icon_share_pressed.png" Width="49" Height="49" VerticalAlignment="Center"/>
+                        <TextBlock  Text="Поделиться с друзьями" Height="Auto" Width="388" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}" />
                     </StackPanel>
                     <StackPanel Margin="0,0,0,17" Orientation="Horizontal" Name="VkLogOut"  Visibility="Visible" Tap="VkLogOut_Tap"  >
                         <Image Source="/Icons/icon_logout.png" Width="49" Height="49" VerticalAlignment="Center"/>
-                        <TextBlock Text="Выйти из аккаунта" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}" />
+                        <TextBlock Text="Выйти из аккаунта" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}"  />
                     </StackPanel>
-                    <local:UrlizerTextBox Content="href=vk.com cawa a"></local:UrlizerTextBox>
                     <!--<StackPanel Margin="0,0,0,17" Orientation="Horizontal">
                         <Image Source="/Icons/icon_sm_catalog.png" Wi <TextBlock Text="Войти вконтакте" TextWrapping="Wrap" Name="" Style="{StaticResource PhoneTextExtraLargeStyle}"/>dth="60" Height="60" VerticalAlignment="Top"/>
                         <TextBlock Text="Список групп" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}" Name="GroupList2"/>
                     </StackPanel>-->
                     <!--<TextBlock Text="{Binding LineTwo}" TextWrapping="Wrap" Margin="12,-6,12,0" Style="{StaticResource PhoneTextSubtleStyle}"/>-->
-                </StackPanel>
+                </StackPanel >
                 <!--</DataTemplate>-->
                 <!--</phone:LongListSelector.ItemTemplate>-->
                 <!--</phone:LongListSelector>-->
@@ -163,7 +162,7 @@
                                         <!--</Button>-->
                                     </StackPanel>
                                 <!--<local:ImageWithLoading Url="{Binding  First}"  Grid.Row="1" Source="{Binding First,Converter= {StaticResource imgConverter}}" Margin="3,0,3,3" Visibility="{Binding isNeedShowBigPicture}" Tap="ImageWithLoading_Tap_1" />-->
-                                <local:ImageWithLoading Url="{Binding  First}"  Grid.Row="1" Source="{Binding FirstCached,Converter= {StaticResource imgConverter}}" Margin="3,0,3,3" Visibility="{Binding isNeedShowBigPicture}" Tap="onImageNewsTap" />
+                                    <local:ImageWithLoading Url="{Binding  First}"  Height="{Binding FirstScaledHeight}" Grid.Row="1" Source="{Binding FirstCached,Converter= {StaticResource imgConverter}}" Margin="3,0,3,3" Visibility="{Binding isNeedShowBigPicture}" Tap="onImageNewsTap" />
                                 <ListBox x:Name="AlbumImagesListBox" Grid.Row="2" 
 			                        toolkit:TiltEffect.IsTiltEnabled="True"
 			                        ItemsSource="{Binding Src_big}" ScrollViewer.VerticalScrollBarVisibility="Disabled" >

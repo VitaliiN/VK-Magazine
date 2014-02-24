@@ -27,5 +27,7 @@ namespace VKMagazine.Response
     {
         public string src_big { get; set; }
         public string src_small { get; set; }
+        public double width { get; set; }
+        public double height { get; set; }
     }
 }

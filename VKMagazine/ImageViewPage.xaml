@@ -27,18 +27,20 @@
     
 
             <Grid x:Name="ContentPanel">
-                <Grid.RowDefinitions>
+        <Grid.Resources>
+        </Grid.Resources>
+            <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-        <toolkit:FlipView  x:Name="HorizontalFlipView" Visibility="Visible" 
-                              
+        <toolkit:FlipView   x:Name="HorizontalFlipView" Visibility="Visible" 
                               Grid.Row="1" SelectionChanged="HorizontalFlipView_SelectionChanged"
                              >
+           
             <toolkit:FlipView.ItemTemplate>
                 <DataTemplate>
 
-                    <local:ZoomingImage SourceUrl="{Binding OnlineUri}" Update="AA"></local:ZoomingImage>
+                    <local:ZoomingImage IsNeedToUpdate="{Binding IsNeedToUpdate}" Name="ImageView" SourceUrl="{Binding OnlineUri}" Update="AA"></local:ZoomingImage>
 
                 </DataTemplate>
             </toolkit:FlipView.ItemTemplate>

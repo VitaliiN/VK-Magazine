@@ -53,11 +53,12 @@ namespace VKMagazine.Helpers
         {
             InitializeComponent();
             object o =  MainImage.Source;
-            
+          
         }
 
         private void RemoteImage_OnLoaded(object sender, RoutedEventArgs e)
         {
+            //myStoryboard.Begin();
             temporaryImage.Visibility = Visibility.Collapsed;
         }
 
@@ -67,6 +68,8 @@ namespace VKMagazine.Helpers
                 
             //if(Source!=null && ((BitmapImage) Source).UriSource.ToString().Length==0)
               temporaryImage.Visibility = Visibility.Collapsed;
+
+            //myStoryboard.Begin();
         }
     }
 }

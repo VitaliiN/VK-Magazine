@@ -62,7 +62,7 @@ namespace VKMagazine
                         settings.Add(VkHelper.VkUserId, response[5]);
                     }
                     settings.Save();
-                    NavigationService.GoBack();
+                    NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
                     //NavigationService.Navigate(new Uri("/GroupListPage.xaml", UriKind.Relative));
                 }
             }

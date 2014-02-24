@@ -50,7 +50,7 @@ namespace VKMagazine
 
             // Language display initialization
             InitializeLanguage();
-
+            viewModel = new NewsViewModel();
             // Show graphics profiling information while debugging.
             if (Debugger.IsAttached)
             {
